@@ -61,7 +61,7 @@ To try another launch, drop a new PRD into `inputs/` and run `/launch` on it.
 | **Context** | `CLAUDE.md`, `context/` | Single source of truth: company, personas, voice, tiering rubric, approved proof. Every output is grounded in it. |
 | **Skills** | `.claude/skills/` | One playbook per PMM job, with method, specs and templates. Consistent quality on every run. |
 | **Agents** | `.claude/agents/` | Specialists with one job each, limited tools, and rules. The strategist decides the tier, and that decision shapes everything downstream. |
-| **Workflow** | `.claude/commands/launch.md`, `.github/workflows/` | The orchestrator sequences agents, runs three in parallel (the design-director starts once the copywriter is done), enforces the review gate and writes the run report. The GitHub workflow runs it on demand from the Actions tab. |
+| **Workflow** | `.claude/commands/launch.md` | The orchestrator sequences agents, runs three in parallel (the design-director starts once the copywriter is done), enforces the review gate and writes the run report. |
 
 ### Design choices that matter
 - **It decides, not just drafts.** Tiering comes first, and a Tier 3 release deliberately gets less. Saying no to work is part of the system.
@@ -85,6 +85,7 @@ To try another launch, drop a new PRD into `inputs/` and run `/launch` on it.
 ---
 
 ## What I'd build next
-- **Event trigger from Jira:** fire on a Jira release status change via webhook, not just a push to GitHub.
+- **Automatic trigger on GitHub:** a GitHub Actions workflow that runs `/launch` when a new PRD is pushed into `inputs/` (or on demand from the Actions tab), then commits the kit back to the repo. It needs an `ANTHROPIC_API_KEY` repository secret.
+- **Event trigger from Jira:** fire on a Jira release status change via webhook.
 - **Win/loss feed:** pipe call transcripts into a synthesizer agent so the proof points and objections update themselves.
 - **Performance loop:** at L+30, pull adoption data and have the strategist compare results against the brief's success metrics, feeding back into the tiering rubric.
