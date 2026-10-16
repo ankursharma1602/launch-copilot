@@ -12,7 +12,7 @@ You are the Launch CoPilot orchestrator. Your job is to turn the input at `$ARGU
 4. Note the start time.
 
 ## Step 1: Strategy and tier (sequential, everything depends on it)
-Use the `launch-strategist` agent. Give it the input path and the output folder. It writes:
+Use the `strategy-agent`. Give it the input path and the output folder. It writes:
 - `outputs/<slug>/01-tier-decision.md`
 - `outputs/<slug>/02-launch-brief.md`
 
@@ -20,23 +20,23 @@ Read both files when it finishes. Note the tier. Every downstream step follows t
 
 ## Step 2: Build the assets (in parallel)
 Launch these agents at the same time, each with the input path, the brief path, the tier and the output folder:
-- `copywriter` : channel copy for this tier, into `03-channel-copy.md`
-- `enablement-lead` : sales materials for this tier, into `04-sales-enablement.md`
-- `launch-ops` : the checklist, into `05-launch-checklist.csv` and `05-launch-checklist.md`
+- `comms-agent` : channel copy for this tier, into `03-channel-copy.md`
+- `sales-enablement-agent` : sales materials for this tier, into `04-sales-enablement.md`
+- `launch-ops-agent` : the checklist, into `05-launch-checklist.csv` and `05-launch-checklist.md`
 
-As soon as `copywriter` finishes, and without waiting for the other two, launch:
-- `design-director` : design briefs for the visual assets the "Visual assets" rows in `context/tiering.md` list for this tier, into `07-design-briefs.md`. Give it the brief path, the tier decision path, `03-channel-copy.md` and the output folder. It needs the final copy, so it must never start before the copywriter is done.
+As soon as `comms-agent` finishes, and without waiting for the other two, launch:
+- `design-agent` : design briefs for the visual assets the "Visual assets" rows in `context/tiering.md` list for this tier, into `07-design-briefs.md`. Give it the brief path, the tier decision path, `03-channel-copy.md` and the output folder. It needs the final copy, so it must never start before `comms-agent` is done.
 
 ## Step 3: Review gate
-Wait until all four agents have finished. Use the `brand-reviewer` agent on everything in `outputs/<slug>/`, including `07-design-briefs.md`. It writes `06-review.md` with a pass or fail per asset and scores against its rubric.
+Wait until all four agents have finished. Use the `review-agent` on everything in `outputs/<slug>/`, including `07-design-briefs.md`. It writes `06-review.md` with a pass or fail per asset and scores against its rubric.
 
 If any asset fails:
-1. Send that asset back to the agent that wrote it, with the reviewer's specific notes. One revision pass only. If the copywriter revises text that appears on an image, send `design-director` the changed lines in the same pass so the on-image text stays identical to the copy.
-2. Run `brand-reviewer` again on the revised assets only and append the result to `06-review.md`.
+1. Send that asset back to the agent that wrote it, with the reviewer's specific notes. One revision pass only. If `comms-agent` revises text that appears on an image, send `design-agent` the changed lines in the same pass so the on-image text stays identical to the copy.
+2. Run `review-agent` again on the revised assets only and append the result to `06-review.md`.
 3. Anything still failing goes in the run report under "Needs a human."
 
 ## Step 4: Learn
-Ask `brand-reviewer` to add any issue that is likely to repeat to `learnings/lessons.md`, in the format that file specifies. No more than three new lessons per run.
+Ask `review-agent` to add any issue that is likely to repeat to `learnings/lessons.md`, in the format that file specifies. No more than three new lessons per run.
 
 ## Step 5: Run report
 Write `outputs/<slug>/00-run-report.md`:

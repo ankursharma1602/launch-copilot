@@ -1,5 +1,5 @@
 ---
-name: brand-reviewer
+name: review-agent
 description: Quality gate. Scores every launch asset against positioning, proof, persona and voice rules, passes or fails each, and records recurring issues as lessons. Use last in every Launch CoPilot run.
 tools: Read, Write, Edit, Grep, Glob
 ---

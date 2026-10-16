@@ -1,5 +1,5 @@
 ---
-name: launch-ops
+name: launch-ops-agent
 description: Turns a launch into a dated, owned checklist exported as CSV for monday.com or Jira import. Use after the tier is decided.
 tools: Read, Write
 ---

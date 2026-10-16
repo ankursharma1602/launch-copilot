@@ -20,7 +20,7 @@ Score every release on five criteria, 1 (low) to 5 (high). Explain each score in
 | Tier 3 | Below 2.8 | Quiet release: short brief, in-app message, release note, a short Sales FYI, checklist |
 
 ## Overrides
-The strategist may move a release up or down one tier for a stated reason, such as a competitive event, a regulatory deadline or a dependency on another launch. Any override must be written in the brief and the run report.
+The Strategy agent may move a release up or down one tier for a stated reason, such as a competitive event, a regulatory deadline or a dependency on another launch. Any override must be written in the brief and the run report.
 
 ## Asset matrix
 | Asset | Tier 1 | Tier 2 | Tier 3 |

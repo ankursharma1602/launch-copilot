@@ -1,5 +1,5 @@
 ---
-name: enablement-lead
+name: sales-enablement-agent
 description: Builds sales enablement for a launch (one-pager, talk track, objections, FAQ), sized to the tier. Use after the launch brief exists.
 tools: Read, Write, Edit
 ---

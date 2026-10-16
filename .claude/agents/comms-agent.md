@@ -1,5 +1,5 @@
 ---
-name: copywriter
+name: comms-agent
 description: Writes customer-facing launch copy across channels, sized to the launch tier. Use after the launch brief exists.
 tools: Read, Write, Edit
 ---

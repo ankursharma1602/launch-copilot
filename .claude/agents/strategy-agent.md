@@ -1,5 +1,5 @@
 ---
-name: launch-strategist
+name: strategy-agent
 description: Decides the launch tier and writes the launch brief. Use first in every Launch CoPilot run, before any other agent.
 tools: Read, Write, Glob, Grep
 ---

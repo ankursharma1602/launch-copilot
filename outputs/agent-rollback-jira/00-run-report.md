@@ -11,7 +11,7 @@ Why now: the CEO named AI agents acting on SaaS data as a growth driver in Aug 2
 
 ## Decisions the system made
 - **Tier 2 at 3.95.** Scores: reach 3, commercial 4, strategic fit 5, competitive 4, story 4. No override: none of the permitted reasons (competitive event, regulatory deadline, launch dependency) is documented.
-- **Rubric gap.** `context/tiering.md` puts Tier 1 at "4.0 and above" and Tier 2 at "2.8 to 3.9", so 3.95 falls in neither band. The strategist treated 4.0 as the floor. A human should confirm this and fix the boundary in the rubric.
+- **Rubric gap.** `context/tiering.md` puts Tier 1 at "4.0 and above" and Tier 2 at "2.8 to 3.9", so 3.95 falls in neither band. The Strategy agent treated 4.0 as the floor. A human should confirm this and fix the boundary in the rubric.
 - **Deliberately not produced (Tier 2):** blog post outline, external announcement.
 - **No "first" or "only" claims anywhere.** The competitor capability check is unverified.
 - **Recovery-point wording.** Context says "under 24 hours"; the input says attachments may come from a backup "up to 24 hours old". Assets use only the input's attachment wording and leave out "under 24 hours" until confirmed.

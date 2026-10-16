@@ -1,6 +1,6 @@
 # Lessons learned
 
-The brand-reviewer adds a line here when it finds an issue that is likely to repeat. Every run reads this file first. Keep each lesson to one line, newest first. Remove lessons that no longer apply.
+The Review agent adds a line here when it finds an issue that is likely to repeat. Every run reads this file first. Keep each lesson to one line, newest first. Remove lessons that no longer apply.
 
 Format: `- YYYY-MM-DD | asset type | lesson`
 
