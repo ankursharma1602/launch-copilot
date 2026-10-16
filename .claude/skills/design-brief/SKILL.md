@@ -25,13 +25,14 @@ description: Write a design brief for each visual a launch tier needs, then rend
 
 ## Style
 Follow `context/brand.md`. In every visual:
-- **Colours:** only the hex codes in `context/brand.md` (primary Blue Zodiac, secondaries Link Water and Ebony, white), plus tints of the primary for schematic shapes.
+- **Colours:** only the hex codes in `context/brand.md` (primary warm yellow, secondary dark navy, plus the light and dark neutrals and white), and tints of those for schematic shapes. Yellow is the accent in every visual. Navy carries the type. Do not set text in yellow on a light background.
 - **Typeface:** Cabin, from `context/brand.md`, with its fallback stack. Embed or load the font in the SVG so the PNG renders in Cabin. Check the PNG.
+- **Headlines use the customer's words**, never internal terms such as "actor", "blast radius" or "selective rollback". Say "agent", "rule", "integration", "changes", "the whole site". If the on-image text in `07-channel-copy.md` uses an internal term, flag it in the brief and ask for a fix; do not rewrite it yourself.
 - **Wordmark:** the word "Rewind" set as live text in Cabin 700, in the brand colour for the background (Blue Zodiac on light, white on dark), top left, with clear space. Do not download or embed Rewind's logo file, and do not draw the logo or the Boomerang mark. Say in the brief: "Wordmark set in type, not the official logo file."
 - **Style:** calm, trustworthy, enterprise. Light background, generous space, one idea per image, strong type hierarchy (headline clearly largest).
 - Show the mechanism, not the fear: one actor's changes lift out of a timeline while everyone else's work stays in place. Use abstract shapes and schematic cards with no real-looking text, counts or ticket numbers.
 - The AI agent is one neutral actor among others, never a villain.
-- The palette and typeface are unconfirmed. Add `[NEED PROOF: confirm brand palette and typeface with Rewind's brand team]` to the brief. Do not use the Boomerang yellow until `context/brand.md` gives its hex.
+- The palette and typeface are unconfirmed. Add `[NEED PROOF: confirm brand palette and typeface with Rewind's brand team]` to the brief. The yellow hex in `context/brand.md` is marked unconfirmed. Carry that flag into the brief.
 
 ## What to avoid
 - Red alarms, warning triangles, skulls, glitch effects, anything that sells fear.

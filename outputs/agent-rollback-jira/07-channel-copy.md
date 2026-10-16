@@ -89,7 +89,7 @@ Written to be rendered unchanged. Counts include the wordmark "Rewind". The emai
 
 ### LinkedIn image (17 words)
 - Wordmark: Rewind
-- Headline: Undo the one actor, not the whole site.
+- Headline: Undo one agent's changes, not the whole site.
 - Supporting line: See what will change back before you restore.
 
 ### One-pager layout (28 words)
@@ -104,4 +104,4 @@ Written to be rendered unchanged. Counts include the wordmark "Rewind". The emai
 - The next step is the release note because how a customer turns the feature on is unknown. [NEED PROOF: how a customer turns the feature on, and whether it needs setup]
 - The Confluence roadmap line is left out of every asset. It needs Legal sign-off and none of these assets mention Confluence.
 - "Exportable for auditors" is not used. Copy says "can be exported".
-- Brand hex codes and typeface are unconfirmed, so no visual leaves the team yet. [NEED PROOF: confirm brand hex codes and typeface]
+- Brand hex codes (including the yellow) and typeface are unconfirmed, so no visual leaves the team yet. [NEED PROOF: confirm brand hex codes and typeface]

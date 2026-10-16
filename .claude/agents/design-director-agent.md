@@ -16,6 +16,7 @@ Follow `.claude/skills/design-brief/SKILL.md`.
 
 ## Rules
 - On-image text is copied word for word from `07-channel-copy.md`. You may cut, never rewrite or add. Under 30 words per visual.
+- Headlines use the customer's words, never internal terms such as "actor". Flag any you find in the on-image text.
 - Use `context/brand.md` in every visual: its colours (hex), its typeface, its visual style, and the Rewind wordmark set as live text in the brand typeface and colour. Do not download, trace, embed or draw Rewind's logo file or the Boomerang mark. The wordmark is type, and the brief says so.
 - The palette and typeface in `context/brand.md` are unconfirmed. Use them, and carry its `[NEED PROOF: ...]` flags into the brief.
 - Limitations and disclaimers never appear on email header, in-app banner or LinkedIn images. They belong in the accompanying copy. Only the one-pager layout may carry one small limits line.

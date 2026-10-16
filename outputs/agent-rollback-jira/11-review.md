@@ -136,3 +136,46 @@ Scope: 09, 09b and 09c only, after one revision pass. Checked with Grep and a ma
 5. New, minor: 09 FAQ "Does it go back before we started with Rewind?" says "Two closed beta accounts did not get this at first (mock, internal)". It is labelled internal and the page bans repeating beta figures, so it is not a fail. Safer to delete "Two closed beta accounts did not get this at first" and keep "so say it early".
 
 No asset in this pass needs a human beyond the open [NEED PROOF] items already collected above.
+
+## Visuals revision review
+Scope: 08-design-briefs.md and the four visuals (email header, in-app banner, LinkedIn image, one-pager layout), after the brand update (yellow #FFC72C unconfirmed, navy #16225C). Checked with Grep on the SVGs and brief, and by opening all four PNGs. Word counts done by hand.
+
+### Mechanical checks
+- Em dashes, en dashes, exclamation marks in 08 and the four SVGs: 0 found.
+- Internal terms ("actor", "blast radius", "selective rollback", "Actor view") in any SVG: 0 found. They appear in 08 only in the internal-term check note, not on any image.
+- Colours in all four SVGs: only #F5F8FD, #16225C, #FFC72C, #FFFFFF, #0E102B, plus opacity tints of navy and yellow. No other hex.
+- Text in yellow: none. Every `<text>` fill is #16225C or #0E102B. Yellow is used only for bars, pills, lane tint and lifted blocks.
+- Embedded images, paths or logo files in the SVGs: none. "Rewind" is a `<text>` element in Cabin 700, navy, top left. No Boomerang mark.
+- Font: each SVG imports Cabin from Google Fonts. In the PNGs the glyphs are Cabin (the single-storey "a" shapes, the "g" and "y" forms), not Helvetica or Arial.
+- Pixel sizes: I could not run sips in this session (no shell tool). The images opened at 1200 x 400, 1280 x 320 and 1200 x 627 with coordinates matching the SVG viewBoxes, and the one-pager opened as 2550 x 3300. The brief states a match for all four. Treat as passed on the evidence, and re-run `sips -g pixelWidth -g pixelHeight` on the four PNGs if you want it on record.
+
+### On-image text and word counts (matched word for word to 07 "On-image text")
+| Visual | Text in SVG | Words | Matches 07 |
+|---|---|---|---|
+| Email header | Rewind / Undo the one change, not the whole site. / Agent Rollback for Jira | 1 + 8 + 4 = 13 | Yes |
+| In-app banner | Rewind / Undo what one rule or AI agent changed. / See the effect first. | 1 + 8 + 4 = 13 | Yes |
+| LinkedIn image | Rewind / Undo one agent's changes, not the whole site. / See what will change back before you restore. | 1 + 8 + 8 = 17 | Yes (curly apostrophe only) |
+| One-pager | Rewind / Undo what one rule or AI agent changed. / See what changes back first. / Jira Cloud. Changes after your first Rewind backup. Issues and fields. Specific plan tier. | 1 + 8 + 5 + 14 = 28 | Yes |
+
+All under 30. The LinkedIn headline is exactly "Undo one agent's changes, not the whole site."
+
+### Result per visual
+| Visual | Colour and accent | Cabin and wordmark | Customer words | Limits rule | Size, clipping | Result |
+|---|---|---|---|---|---|---|
+| Email header | Pass | Pass | Pass | Pass (no limits or plan text) | Pass | **Pass** |
+| In-app banner | Pass | Pass | Pass | Pass | Pass | **Pass** |
+| LinkedIn image | Pass | Pass | Pass | Pass | Pass | **Pass** |
+| One-pager layout | Pass | Pass | Pass | Pass (one small limits line only, body blocks empty) | Pass | **Pass** |
+
+Contrast: navy on Link Water and navy on yellow are readable in all four. The small limits line (Ebony, 40 px at 2550 wide) is legible. Nothing is clipped or overlapping. Lifted blocks clear the top lane in every card.
+
+### 08-design-briefs.md
+Pass. It carries [NEED PROOF: confirm brand palette and typeface with Rewind's brand team], [NEED PROOF: confirm Boomerang yellow hex and navy with Rewind's brand team], and the attachment-wording tag. It says "Wordmark set in type, not the official logo file" in the style note and in each asset. It has no beta numbers or quotes and says the limits stay in the copy.
+
+### Advisory items (non-blocking)
+1. In-app banner: the pill starts about 8 px below the descender of "agent" on the second headline line. It is clear but tight. If the banner is touched again, add 6 to 10 px between headline and pill.
+2. 07 still uses internal terms in customer copy, as 08 notes: the email preview ("Undo one actor's changes in Jira Cloud...") and "actor" in the email body, release note and LinkedIn post. They are not on any image. The copywriter should swap "actor" for "agent, rule or integration" where it reads as customer copy.
+3. The 08 one-pager "Does not claim" line is correct: the attachment limit is not on the one-pager's small line and must be carried by the body blocks filled from 09.
+4. Palette, typeface and yellow hex stay unconfirmed. No visual leaves the team until the brand team confirms.
+
+No visual needs a revision. No fixes required.
