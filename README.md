@@ -1,6 +1,6 @@
 # Product Launch CoPilot
 
-A GTM launch team in a repo. Eleven agents take a PRD to a full, reviewed launch: brief, audience, positioning, messaging, a tiered campaign plan, copy, visuals, sales enablement and a launch checklist.
+A GTM launch team in a repo. Eleven agents take a closed beta handoff to a full, reviewed launch: brief, audience, positioning, messaging, a tiered campaign plan, copy, visuals, sales enablement and a launch checklist.
 
 **Demo:** a full launch for a mock Rewind release, Agent Rollback for Jira. Start with `outputs/agent-rollback-jira/00-run-report.md`.
 
@@ -11,17 +11,17 @@ A GTM launch team in a repo. Eleven agents take a PRD to a full, reviewed launch
 1. Install Claude Code if you haven't: `npm install -g @anthropic-ai/claude-code`
 2. Clone the repo and open it: `git clone https://github.com/ankursharma1602/launch-copilot.git && cd launch-copilot`
 3. Run `claude`
-4. Type: `/launch inputs/prd-agent-rollback-jira.md`
+4. Type: `/launch inputs/closed-beta-handoff-agent-rollback-jira.md`
 5. Approve file writes when asked. The kit lands in `outputs/agent-rollback-jira/`. Start with `00-run-report.md`.
 
-To try another launch, drop a new PRD into `inputs/` and run `/launch` on it.
+To try another launch, drop a new closed beta handoff into `inputs/` and run `/launch` on it.
 
 ---
 
 ## How it works
 
 ```
-                    inputs/<prd>.md
+                    inputs/<handoff>.md
                            |
                   /launch (orchestrator)
                            |
@@ -29,7 +29,7 @@ To try another launch, drop a new PRD into `inputs/` and run `/launch` on it.
                            |
               [ Launch Brief agent ]          01-launch-brief
                            |
-              [ PRD to Context agent ]        02-launch-context
+              [ Product Context agent ]        02-launch-context
                            |
               [ Audience agent ]              03-audience
                            |
@@ -88,9 +88,9 @@ To try another launch, drop a new PRD into `inputs/` and run `/launch` on it.
 | Step | Agent | What it does | Output |
 |---|---|---|---|
 | 1 | Launch Brief | Frames the launch: what, why it matters, goals, timeline, stakeholders, open questions | `01-launch-brief.md` |
-| 2 | PRD to Context | Turns the PRD into customer-term capabilities, limitations, availability, dependencies and gaps | `02-launch-context.md` |
-| 3 | Audience | Best-fit segments and personas for this launch | `03-audience.md` |
-| 4 | Positioning | Positioning built in order: alternatives, attributes, value and proof, best-fit customers, category, trends | `04-positioning.md` |
+| 2 | Product Context | Turns the closed beta handoff into launch-ready context, keeping what is built separate from what closed beta customers said | `02-launch-context.md` |
+| 3 | Audience | Best-fit segments and personas, tested against who got the most value in closed beta | `03-audience.md` |
+| 4 | Positioning | Positioning built in order: alternatives (starting with what beta customers compared it to), attributes, value and proof, best-fit customers, category, trends | `04-positioning.md` |
 | 5 | Messaging | Core message, value pillars with proof, angles per persona | `05-messaging.md` |
 | 6 | Campaign Strategy | Scores the release, decides the tier, plans the campaign | `06-campaign-strategy.md` |
 | 7 | Copywriter | Channel copy for the tier | `07-channel-copy.md` |
@@ -120,8 +120,8 @@ To try another launch, drop a new PRD into `inputs/` and run `/launch` on it.
 
 ## Demo script (4 minutes)
 
-1. **Show the input** (20 sec): open `inputs/prd-agent-rollback-jira.md`. "A PRD, nothing more."
-2. **Run it** (30 sec, or show a finished run): `/launch inputs/prd-agent-rollback-jira.md`. Point out the strategy chain running in order, then copy and sales enablement in parallel.
+1. **Show the input** (20 sec): open `inputs/closed-beta-handoff-agent-rollback-jira.md`. "A closed beta handoff: epic, release notes, demo notes, beta stats and mock customer feedback."
+2. **Run it** (30 sec, or show a finished run): `/launch inputs/closed-beta-handoff-agent-rollback-jira.md`. Point out the strategy chain running in order, then copy and sales enablement in parallel.
 3. **Open the positioning** (40 sec): `04-positioning.md`. Alternatives first, then attributes, value, customers, category, trends. No slogan.
 4. **Open the run report** (40 sec): tier and why, what it chose not to produce, and the "Needs a human" list of proof gaps.
 5. **Open the visuals** (30 sec): the PNGs in `visuals/`, with the exact text from the copy.
@@ -131,7 +131,7 @@ To try another launch, drop a new PRD into `inputs/` and run `/launch` on it.
 ---
 
 ## What I'd build next
-- **Automatic trigger on GitHub:** a GitHub Actions workflow that runs `/launch` when a new PRD is pushed into `inputs/` (or on demand from the Actions tab), then commits the kit back to the repo. It needs an `ANTHROPIC_API_KEY` repository secret.
+- **Automatic trigger on GitHub:** a GitHub Actions workflow that runs `/launch` when a new closed beta handoff is pushed into `inputs/` (or on demand from the Actions tab), then commits the kit back to the repo. It needs an `ANTHROPIC_API_KEY` repository secret.
 - **Event trigger from Jira:** fire on a Jira release status change via webhook.
 - **Win/loss feed:** pipe call transcripts into a synthesizer agent so the proof points and objections update themselves.
 - **Performance loop:** at L+30, pull adoption data and have the Campaign Strategy agent compare results against the brief's success metrics, feeding back into the tiering rubric.

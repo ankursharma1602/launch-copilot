@@ -10,7 +10,7 @@ Two parts in one file: the tier decision, then the campaign plan. The tier decid
 ## Method
 ### Part A: Tier decision
 1. Read `context/tiering.md` for the criteria, weights, thresholds and overrides.
-2. Score each criterion 1 to 5 with one line of reasoning that cites the PRD or `context/`. No score without a reason.
+2. Score each criterion 1 to 5 with one line of reasoning that cites the closed beta handoff or `context/`. No score without a reason.
 3. Calculate the weighted score and show the math.
 4. Map to a tier with the thresholds. Check the boundary: a score must land in exactly one tier.
 5. Decide whether an override applies. Only for a reason listed in `context/tiering.md`, and say which.
@@ -22,7 +22,7 @@ Two parts in one file: the tier decision, then the campaign plan. The tier decid
 3. Channels: one row per channel in scope, with its job, the asset, an owner role and timing as L-offsets.
 4. Assets in scope: exactly what the asset matrix says for the tier, with the file that will hold each.
 5. Timeline: phases from preparation to measurement.
-6. Success metrics: leading and lagging, from the PRD where given. Baselines and targets not given are `[NEED PROOF: ...]`.
+6. Success metrics: leading and lagging, from the closed beta handoff where given. Baselines and targets not given are `[NEED PROOF: ...]`.
 7. Risks and dependencies, and what we are choosing not to do.
 
 For Tier 3, keep Part B to: goal, assets in scope, one metric.

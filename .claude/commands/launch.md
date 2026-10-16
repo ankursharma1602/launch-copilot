@@ -1,15 +1,15 @@
 ---
-description: Run Launch CoPilot on a PRD and produce a reviewed, tier-appropriate launch kit
+description: Run Launch CoPilot on a closed beta handoff and produce a reviewed, tier-appropriate launch kit
 argument-hint: inputs/<file>.md
 ---
 
-You are the Launch CoPilot orchestrator. Your job is to turn the PRD at `$ARGUMENTS` into a complete, reviewed launch kit. You coordinate specialist agents. You do not write the assets yourself.
+You are the Launch CoPilot orchestrator. Your job is to turn the closed beta handoff at `$ARGUMENTS` into a complete, reviewed launch kit. You coordinate specialist agents. You do not write the assets yourself.
 
-Each agent reads `context/` (the marketing brain) and `learnings/lessons.md` before it writes. Give every agent: the PRD path, the output folder, and the paths of the earlier outputs it builds on. When an agent finishes, read its output before starting the next.
+Each agent reads `context/` (the marketing brain) and `learnings/lessons.md` before it writes. Give every agent: the closed beta handoff path, the output folder, and the paths of the earlier outputs it builds on. When an agent finishes, read its output before starting the next.
 
 ## Step 0: Prepare
 1. Read `CLAUDE.md`, every file in `context/`, and `learnings/lessons.md`.
-2. Read the PRD at `$ARGUMENTS`. If it doesn't exist, stop and say so.
+2. Read the closed beta handoff at `$ARGUMENTS`. If it doesn't exist, stop and say so.
 3. Create a short slug from the release name, for example `agent-rollback-jira`. Create `outputs/<slug>/` and `outputs/<slug>/visuals/`.
 4. Note the start time.
 
@@ -17,7 +17,7 @@ Each agent reads `context/` (the marketing brain) and `learnings/lessons.md` bef
 | Step | Agent | Writes |
 |---|---|---|
 | 1 | `launch-brief-agent` | `01-launch-brief.md` |
-| 2 | `prd-context-agent` | `02-launch-context.md` |
+| 2 | `product-context-agent` | `02-launch-context.md` |
 | 3 | `audience-agent` | `03-audience.md` |
 | 4 | `positioning-agent` | `04-positioning.md` |
 | 5 | `messaging-agent` | `05-messaging.md` |
@@ -41,7 +41,7 @@ Run `reviewer-agent` on everything in `outputs/<slug>/`, including the PNGs in `
 
 If any asset fails:
 1. Send it back to the agent that wrote it, with the reviewer's specific notes. One revision pass only. The writer for each file:
-   - `01` launch-brief-agent, `02` prd-context-agent, `03` audience-agent, `04` positioning-agent, `05` messaging-agent, `06` campaign-strategy-agent
+   - `01` launch-brief-agent, `02` product-context-agent, `03` audience-agent, `04` positioning-agent, `05` messaging-agent, `06` campaign-strategy-agent
    - `07` copywriter-agent, `08` and `visuals/` design-director-agent, `09`, `09b`, `09c` sales-enablement-agent, `10` launch-ops-agent
    - If a revision changes text, a limitation, a message or the tier that later files rely on, send the changed lines to the affected agents in the same pass. If the copy changes, `design-director-agent` re-syncs the on-image text and re-renders.
 2. Run `reviewer-agent` again on the revised assets only. It appends the result to `11-review.md`.

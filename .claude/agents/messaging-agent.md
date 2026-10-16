@@ -14,7 +14,7 @@ Follow `.claude/skills/messaging/SKILL.md`. Write `05-messaging.md`.
 
 ## Rules
 - Every message derives from `04-positioning.md`. If you need a message the positioning does not support, say the positioning has a gap. Do not invent a new claim.
-- Each value pillar carries proof from `context/proof-points.md` or the PRD, or `[NEED PROOF: ...]`.
+- Each value pillar carries proof from `context/proof-points.md` or the closed beta handoff, or `[NEED PROOF: ...]`.
 - Messages say what the customer gets, not what the feature is called.
 - Carry the limitations from `02-launch-context.md` into a "Must say" list. Copy that follows will repeat it.
 - Follow `context/voice.md`. No em dashes, no banned words.

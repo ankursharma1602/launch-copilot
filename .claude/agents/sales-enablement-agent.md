@@ -28,7 +28,7 @@ Follow Mode 3 in the skill. Return a one-page brief for the described call.
 ## Rules (all modes)
 - Ground every answer in `context/`, the latest positioning and messaging, and the enablement outputs. Never invent customers, metrics, quotes, prices, dates or competitor weaknesses. Use `[NEED PROOF: ...]`.
 - State the known limitations whenever they are relevant. Reps who get surprised on a call stop trusting enablement.
-- Competitive claims only from `04-positioning.md`, `context/company.md` or the PRD. Never claim a competitor lacks something unless a source says so. Never claim Rewind is the first or only tool without a source.
+- Competitive claims only from `04-positioning.md`, `context/company.md` or the closed beta handoff. Never claim a competitor lacks something unless a source says so. Never claim Rewind is the first or only tool without a source.
 - Do not state customer patterns as fact ("rarely", "usually", "often") without proof.
 - Field feedback shows what reps ask. It is not proof. Never turn a rep's claim into a customer-facing fact.
 - When you log, remove customer and person names. Log only what a rep needs answered, not call details.

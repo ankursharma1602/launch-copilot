@@ -12,6 +12,7 @@ description: Write launch copy for email, in-app, release notes, blog outline an
 4. Reuse the core message and value pillars. Adapt length and tone to the channel, not the meaning.
 5. Use the persona angle from `05-messaging.md` for the persona each channel reaches.
 6. Check `learnings/lessons.md` and apply every relevant lesson.
+7. Write the on-image text for each visual the tier gets (email header, in-app banner, LinkedIn image, one-pager layout), under 30 words each. On-image text is the headline and at most one short supporting line. It carries no limitations, disclaimers or plan caveats on the email header, in-app banner or LinkedIn image: those stay in the email, in-app message and post beside them. The one-pager layout may carry one small limits line. Count the wordmark "Rewind" in the word count.
 
 ## Channel specs
 | Asset | Spec |

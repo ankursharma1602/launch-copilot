@@ -1,78 +1,97 @@
-# Launch checklist: Agent Rollback for Jira (Tier 2)
+# Launch checklist: Agent Rollback for Jira
 
-> Hypothetical release written to demo Launch CoPilot. GA date is [NEED PROOF: GA date], so every due date is an offset from launch day (L). Offsets and owners are placeholders for the team to confirm. Importable version: `10-launch-checklist.csv`.
+**Tier:** 2 | **Builds on:** 06-campaign-strategy.md | **Launch day:** L ([NEED PROOF: GA date]) | **Import file:** 10-launch-checklist.csv (monday.com or Jira)
 
-The plan has 40 tasks. Tier 2 scope: email, in-app message and banner, release note, LinkedIn, sales kit with session and quiz, four visuals. No blog, no press, no Sales FYI.
+Owners are roles. GA date is unknown, so every date is an offset from L. Offsets are copied from the timeline in 06-campaign-strategy.md. Format: `- [ ] <Due> | <Owner> | <Task>`
 
-## Prepare (L-30 to L-8)
+Not in this plan, by tier: blog post, blog hero image, Sales FYI, press or analyst announcement, paid media.
 
-- [ ] L-30 | Product manager for Jira | Confirm GA date
-- [ ] L-28 | Pricing and packaging owner | Name plan tier and price (after: Confirm GA date)
-- [ ] L-28 | Product manager for Jira; Engineering lead | Decide attachment wording
-- [ ] L-28 | Product manager for Jira; Product marketing lead | Source Atlassian claim
-- [ ] L-28 | Competitive intelligence | Finish competitor check
-- [ ] L-25 | Legal or compliance reviewer | Legal review audit log line
-- [ ] L-25 | Legal or compliance reviewer; Product manager for Jira | Legal review Confluence line
-- [ ] L-25 | Revenue operations | Confirm revenue tracking
-- [ ] L-21 | Engineering lead | Answer engineering gaps
-- [ ] L-21 | Customer success or support lead; Product marketing lead | Check customer proof
-- [ ] L-21 | Product manager for Jira; Revenue operations | Set metric baselines and targets (after: Name plan tier and price; Confirm revenue tracking)
-- [ ] L-14 | Revenue operations | Size the target segments (after: Confirm revenue tracking)
-- [ ] L-14 | Lifecycle marketing | Set channel baselines
-- [ ] L-14 | Product marketing lead; Design lead | Confirm brand assets and links
-- [ ] L-14 | Marketplace and channel owner | Confirm marketplace listing (after: Confirm GA date)
-- [ ] L-12 | Product marketing lead | Update copy with answers (after: Name plan tier and price; Decide attachment wording; Source Atlassian claim; Finish competitor check; Legal review audit log line; Legal review Confluence line; Answer engineering gaps; Check customer proof)
-- [ ] L-10 | Product marketing lead; Design lead | Fill one-pager from 09 (after: Update copy with answers; Confirm brand assets and links)
-- [ ] L-10 | Design lead | Refresh visuals (after: Update copy with answers; Confirm brand assets and links). Text matches the on-image text in 07 and 08 as finally rendered.
-- [ ] L-8 | Customer success or support lead | Brief support on attachments (after: Decide attachment wording)
-- [ ] L-8 | Product marketing lead; Reviewer | Final review (after: Fill one-pager from 09; Refresh visuals)
+## Prepare (L-28 to L-14)
 
-## Enable (L-7 to L-1)
+Build window L-28 to L-18, then final review L-17 to L-14.
 
-- [ ] L-7 | Lifecycle marketing | Set email segment (after: Size the target segments; Final review)
-- [ ] L-5 | Sales leadership and enablement | Send sales kit to reps (after: Final review)
-- [ ] L-5 | Sales leadership and enablement | Run enablement session (after: Send sales kit to reps)
-- [ ] L-2 | Sales leadership and enablement | Run readiness quiz (after: Run enablement session)
-- [ ] L-3 | Product manager for Jira; Product marketing lead | QA in-app message and banner (after: Final review)
-- [ ] L-3 | Lifecycle marketing | Send email test (after: Set email segment; Confirm brand assets and links)
-- [ ] L-3 | Product marketing lead; Product manager for Jira | Approve release note and LinkedIn (after: Final review)
-- [ ] L-1 | Product marketing lead; Product manager for Jira; Sales leadership and enablement | Go or no-go (after: Run readiness quiz; QA in-app message and banner; Send email test; Approve release note and LinkedIn; Confirm marketplace listing)
+- [ ] L-28 | Product manager (Jira) | Confirm GA date
+- [ ] L-26 | Product marketing | Chase open items to owners (after: Confirm GA date)
+- [ ] L-22 | Product marketing (lifecycle) | Draft channel copy
+- [ ] L-20 | Design director | Draft design briefs and visuals
+- [ ] L-20 | Sales enablement lead | Draft sales kit
+- [ ] L-18 | Launch operations | Draft launch checklist
+- [ ] L-17 | Reviewer agent | Reviewer pass
+- [ ] L-15 | Pricing and packaging | Confirm plan names and pricing
+- [ ] L-15 | Support lead; Product manager (Jira); Engineering lead | Decide attachment wording
+- [ ] L-15 | Sales Engineering | Source Atlassian native claim
+- [ ] L-15 | Product marketing; Sales Engineering | Run competitor check
+- [ ] L-15 | Legal | Legal review of audit and Confluence wording
+- [ ] L-15 | Brand team | Confirm brand palette and typeface
+- [ ] L-15 | Product manager (Jira) | Define how customers turn it on
+- [ ] L-15 | Engineering lead | Answer product behavior questions
+- [ ] L-15 | Product manager (Jira) | Confirm data types and audit log contents
+- [ ] L-15 | Customer success; Product manager (Jira) | Decide who can run a rollback
+- [ ] L-14 | Product marketing | Revision pass
+- [ ] L-14 | Reviewer agent | Re-review
 
-## Launch (L)
+## Enable (L-12 to L-5)
 
-- [ ] L | Product manager for Jira | Publish release note (after: Go or no-go)
-- [ ] L | Product manager for Jira | Turn on in-app message (after: Go or no-go)
-- [ ] L | Lifecycle marketing | Send customer email (after: Go or no-go)
-- [ ] L | Social owner; Product marketing lead | Post on LinkedIn (after: Go or no-go)
+- [ ] L-12 | Product marketing; Design director | Fill one-pager from 09
+- [ ] L-12 | Sales enablement lead | Set quiz pass mark and target
+- [ ] L-10 | Sales enablement lead | Deliver sales kit (to Sales and Sales Engineering)
+- [ ] L-7 | Sales enablement lead | Run enablement session (30 minutes, 09b)
+- [ ] L-5 | Sales enablement lead | Collect readiness quiz (09c)
+- [ ] L-5 | Sales enablement lead | Log quiz gaps to field feedback
+- [ ] L-5 | Product analytics | Confirm Actor view open counting
+- [ ] L-5 | Revenue operations | Set up CRM buying reason field
+- [ ] L-5 | Product marketing | Size eligible base
+- [ ] L-5 | Product manager (Jira) | Set metric baselines and targets
 
-## Measure (L+7 to L+95)
+## Launch (L-3 to L+1)
 
-- [ ] L+7 | Social owner | Handle LinkedIn replies (after: Post on LinkedIn)
-- [ ] L+14 | Sales leadership and enablement | Review field feedback first pass (after: Run enablement session)
-- [ ] L+14 | Product marketing lead | Check copy on limits (after: Publish release note; Send customer email)
-- [ ] L+30 | Product manager for Jira; Revenue operations | Adoption read-out (after: Set metric baselines and targets; Turn on in-app message)
-- [ ] L+30 | Sales leadership and enablement | Review field feedback second pass (after: Review field feedback first pass)
-- [ ] L+60 | Product marketing lead; Revenue operations | Mid-point checkpoint (after: Adoption read-out)
-- [ ] L+90 | Product manager for Jira; Revenue operations | Expansion read-out (after: Mid-point checkpoint)
-- [ ] L+95 | Product marketing lead | Lessons review (after: Expansion read-out)
+- [ ] L-3 | Product manager (Jira) | Go/no-go
+- [ ] L-1 | Product marketing (lifecycle) | Schedule launch assets
+- [ ] L | Product marketing; Product manager (Jira) | Publish launch day assets (email, in-app message and banner, release note)
+- [ ] L+1 | Product marketing; Social | Publish LinkedIn post and image
+
+## Measure (L+14 to L+90)
+
+- [ ] L+14 | Sales enablement lead | Field feedback review 1
+- [ ] L+30 | Customer success | Beta approval decision (optional, not a gate)
+- [ ] L+30 | Product manager (Jira); Product analytics | Adoption check
+- [ ] L+30 | Sales enablement lead | Field feedback review 2
+- [ ] L+90 | Pricing and packaging; Product marketing | Expansion check
+- [ ] L+90 | Revenue operations | Pipeline read
+- [ ] L+90 | Product marketing; Reviewer agent | Lessons review
+
+## Go/no-go gates (all met at L-3, or the date moves)
+
+| Gate (from 06) | Task that closes it |
+|---|---|
+| 1. GA date confirmed | Confirm GA date |
+| 2. Plan tier wording settled | Confirm plan names and pricing |
+| 3. Legal cleared 'exportable for auditors' and any Confluence line, or both removed | Legal review of audit and Confluence wording |
+| 4. Attachment wording decided | Decide attachment wording |
+| 5. Brand team confirmed colours and typeface | Confirm brand palette and typeface |
+| 6. Product analytics can count Actor view opens | Confirm Actor view open counting |
 
 ## Open questions and the task that resolves each
 
-| Open question | Task |
-|---|---|
-| [NEED PROOF: GA date] | Confirm GA date |
-| [NEED PROOF: plan names and pricing] | Name plan tier and price |
-| Attachment wording conflict (PRD up to 24 hours vs under 24 hours) | Decide attachment wording |
-| [NEED PROOF: sources for the Atlassian no actor-based rollback claim] | Source Atlassian claim |
-| [NEED PROOF: competitor capability check] | Finish competitor check |
-| Legal review of exportable for auditors, audit log retention and standard | Legal review audit log line |
-| [NEED PROOF: sign-off to mention Confluence roadmap publicly] | Legal review Confluence line |
-| Can the CRM capture AI governance cited as a buying reason | Confirm revenue tracking |
-| [NEED PROOF: baselines and targets for success metrics] | Set metric baselines and targets |
-| [NEED PROOF: segment sizes] and plan mix | Size the target segments |
-| [NEED PROOF: channel baselines] | Set channel baselines |
-| Actor type detection, data types, conflict handling, permissions, limits, speed, large sites | Answer engineering gaps |
-| [NEED PROOF: any customer name, quote or benchmark] | Check customer proof |
-| [NEED PROOF: brand palette, fonts and logo files] and email CTA destination link | Confirm brand assets and links |
-| One-pager layout blocks are empty | Fill one-pager from 09 |
-| Marketplace listing or partner notice at L | Confirm marketplace listing |
+| Open item | Owner | Task |
+|---|---|---|
+| GA date | Product manager (Jira) | Confirm GA date |
+| Plan names and pricing | Pricing and packaging | Confirm plan names and pricing |
+| Attachment wording (24-hour phrase) | Support lead; Product manager (Jira); Engineering lead | Decide attachment wording |
+| Source for the Atlassian native claim | Sales Engineering | Source Atlassian native claim |
+| Competitor capability check | Product marketing; Sales Engineering | Run competitor check |
+| Legal review of 'exportable for auditors' and Confluence | Legal | Legal review of audit and Confluence wording |
+| Revenue ops tracking of AI governance as a buying reason | Revenue operations | Set up CRM buying reason field |
+| Brand hex codes and typeface | Brand team | Confirm brand palette and typeface |
+| Product analytics counting Actor view opens | Product analytics | Confirm Actor view open counting |
+| One-pager fill from 09 | Product marketing; Design director | Fill one-pager from 09 |
+| How a customer turns the feature on | Product manager (Jira) | Define how customers turn it on |
+| Approval to use beta results or quotes | Customer success | Beta approval decision |
+| How Actor view tells actor types apart; same-field edit; large sites | Engineering lead | Answer product behavior questions |
+| Rollback-able data types; audit log contents and export format | Product manager (Jira) | Confirm data types and audit log contents |
+| Who can run a rollback | Customer success; Product manager (Jira) | Decide who can run a rollback |
+| Number of Jira Cloud customers on the eligible tier | Product marketing | Size eligible base |
+| Baselines, targets, definition of 'active Jira customers', email and in-app benchmarks | Product manager (Jira) | Set metric baselines and targets |
+| Quiz pass mark and target share of reps | Sales enablement lead | Set quiz pass mark and target |
+| Outcome measure (time saved, restore time) | Not tasked | None exists, so none may be stated. Nothing to resolve before launch. |
+| Budget and paid media targets | Not tasked | No paid media at Tier 2. |

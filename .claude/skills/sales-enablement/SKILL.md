@@ -25,7 +25,7 @@ If an answer is not supported by these, say so. Never invent customer names, met
 4. Objections come from the persona fears in `context/personas.md`, the known limitations, and any matching field feedback.
 5. The FAQ includes every known limitation, stated plainly.
 6. The one-pager has a "Limits to state up front" line with the most important limitations.
-7. Competitive lines only from `04-positioning.md`, `context/company.md` or the PRD.
+7. Competitive lines only from `04-positioning.md`, `context/company.md` or the closed beta handoff.
 8. Write `09-sales-enablement.md`, `09b-enablement-session.md` and `09c-readiness-quiz.md`.
 
 ### 09 Output template

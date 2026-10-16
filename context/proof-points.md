@@ -17,6 +17,7 @@ Only claims listed here, or stated in the input file, may appear in assets. Ever
 
 ## Not yet approved (do not use without proof)
 - Customer logos, names or quotes
+- Closed beta results and closed beta customer quotes (internal evidence from a small group, needs approval before external use)
 - Restore time benchmarks
 - ROI, cost-of-downtime or time-saved figures
 - Analyst rankings or awards

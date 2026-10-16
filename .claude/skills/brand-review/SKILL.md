@@ -9,7 +9,7 @@ description: Review every launch asset against positioning, messaging, proof, pe
 | Dimension | 5 looks like | Fail if |
 |---|---|---|
 | On-positioning and messaging | Matches `04-positioning.md` and `05-messaging.md`: the core message, pillars and persona angle | Invents a message, contradicts the positioning, or drifts from the messaging |
-| Proof integrity | Every claim traces to `context/proof-points.md` or the PRD | Any unsupported claim stated as fact |
+| Proof integrity | Every claim traces to `context/proof-points.md` or the closed beta handoff | Any unsupported claim stated as fact, or any closed beta number or customer quote in a customer-facing asset without `[NEED PROOF: approval to use closed beta results or quotes]` |
 | Persona fit | Speaks the primary persona's language and fear | Generic copy that could be for any product |
 | Voice | Follows every rule in `context/voice.md` | Any em dash, banned word or exclamation mark in customer copy |
 | Spec fit | Meets the spec for that asset | Over a length limit or missing a required part |
@@ -26,7 +26,8 @@ description: Review every launch asset against positioning, messaging, proof, pe
 - **08 Design briefs and visuals:**
   - On-image text is word for word from 07, under 30 words, and matches what is in the SVG.
   - Sizes match the spec table. Check the PNG files exist and read their pixel sizes.
-  - Placeholder brand colors are marked as placeholders. No invented logos, screenshots, numbers or names.
+  - Every visual uses the colours, typeface and wordmark rule in `context/brand.md`, and the PNG shows Cabin. The wordmark is live text, and no Rewind logo file or Boomerang mark is used. The brief flags the unconfirmed palette and typeface. No invented logos, screenshots, numbers or names.
+  - No limitations, disclaimers or plan caveats on the email header, in-app banner or LinkedIn image. Only the one-pager layout carries one small limits line. The limitations are present in the accompanying copy.
   - No fear imagery, and no framing of AI or automation owners as the problem.
   - Open each PNG with the Read tool and check that text is not clipped or overlapping.
 - **09 Sales enablement:** talk track under 150 words, every limitation in the FAQ, one-pager has the "Limits to state up front" line, no unsourced competitor claim, no customer pattern stated as fact.

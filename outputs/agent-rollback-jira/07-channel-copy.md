@@ -1,146 +1,107 @@
 # Channel copy: Agent Rollback for Jira (Tier 2)
 
-**Produced for this tier:** customer email, in-app message, release note, LinkedIn post. Plus exact on-image text for four visuals (email header, in-app banner, LinkedIn image, one-pager layout).
-**Deliberately skipped:** blog post outline and blog hero image (Tier 1 only). Sales FYI (Tier 3 only). Sales assets are written in `09-sales-enablement.md`.
+**Builds on:** 05-messaging.md, 06-campaign-strategy.md | **Persona:** the Atlassian admin (primary) | **Launch date:** not stated in any asset
 
-> Hypothetical release written to demo Launch CoPilot. No plan name, price or date appears. Placeholders are marked `[NEED PROOF: ...]`.
+**Produced for this tier:** customer email, in-app message, release note, LinkedIn post, on-image text for four visuals (email header, in-app banner, LinkedIn image, one-pager layout).
+**Deliberately skipped:** blog post outline and blog hero image (Tier 1 only), Sales FYI (Tier 3 only).
 
-The four Must say limits, short form used below:
-1. First backup: only changes made after the first Rewind backup can be rolled back.
-2. Attachments: restored from the most recent backup, which may be up to 24 hours old.
-3. Platform: Jira Cloud only at launch. Confluence on the roadmap, no date committed.
-4. Plan: included at a specific tier, so not every plan has it.
-
----
+> No beta numbers, customer quotes, price, plan name or date appear anywhere below. Scale scenarios are not used. Limitations were written into each asset first, then the rest was fitted around them.
 
 ## Customer email
-Audience: existing Rewind Jira Cloud customers. Persona: Atlassian admin, then IT or security leader. Pillars 1, 2, 3.
 
-**Subject A:** Undo one agent's changes, not the whole site (44 characters)
-**Subject B:** Undo one actor's changes in Jira (32 characters)
-**Preview:** Preview what changes back, keep your team's work, undo only that actor. (71 characters)
+**Subject A:** Undo the one change, not the whole site (38 characters)
+**Subject B:** Undo what one rule or AI agent changed in Jira (46 characters)
+**Preview:** Undo one actor's changes in Jira Cloud, see the effect first. (61 characters)
 
-Hi [First name],
+A rule, an integration or an AI agent changed issues it should not have. You could restore the whole site and lose your team's work, or fix it by hand.
 
-When an agent or automation rule changes thousands of Jira issues the wrong way, you can restore the whole site and lose your team's work, or fix it by hand.
+With Agent Rollback, pick the one actor and a time window. See which issues, fields and projects will change back, and which will stay. Then undo that actor's changes. Separate edits people made after the bad event stay in place. Each rollback is logged with who ran it, what changed and when. The log can be exported.
 
-Agent Rollback gives you another way. Find what one actor changed, preview what will change back, and undo only that. Changes people made since stay in place. Each rollback is recorded, and the record is exportable for auditors.
-
-Before you start:
-- Only changes made after your first Rewind backup can be rolled back.
+Good to know:
+- Works on Jira Cloud. It can undo changes made after your first Rewind backup.
+- Covers issues and fields.
 - Attachments deleted by an agent are restored from the most recent backup, which may be up to 24 hours old.
-- Jira Cloud only at launch. Confluence is on the roadmap, no date committed. [NEED PROOF: sign-off to mention Confluence roadmap publicly]
-- Included in Rewind's Jira Cloud backup plans at a specific tier, so not every plan has it. [NEED PROOF: plan names and pricing]
+- Included in Rewind's Jira Cloud backup plans at a specific plan tier.
 
-**CTA:** Open Actor view [NEED PROOF: destination link]
+**CTA:** Read the release note [link]
 
-Body is about 130 words.
-
-**Email header, on-image text (verbatim, 24 words):**
-- Headline: Undo one agent's changes, not the whole site.
-- Footer strip: Jira Cloud only at launch. Only changes after your first Rewind backup can be rolled back.
-
----
+(Body word count: 140 plus 4 for the CTA, under 150.)
 
 ## In-app message
-Audience: admins inside Rewind. Limits written first, then headline and button fitted around them.
 
-**Headline:** Undo one agent, not the whole site (7 words)
-**Body:** Only changes after first backup roll back. Deleted attachments restore from a backup up to 24 hours old. Jira Cloud only, not every plan. (24 words)
-**Button:** See Actor view (3 words)
-
-**In-app banner, on-image text (verbatim):**
-- Line 1: Undo one agent, not the whole site.
-- Line 2: Jira Cloud only. Changes after your first backup. Not on every plan.
-- Button label: See Actor view
-
-Note: "Confluence on the roadmap" is left out of the in-app and banner short form because the roadmap line has no sign-off. The release note and email carry it with the flag.
-
----
+**Headline:** Undo what one rule or agent changed (7 words)
+**Body:** Jira Cloud, after your first backup. Agent-deleted attachments come from the latest backup, which may be up to 24 hours old. Specific plan tier. (24 words)
+**Button:** See details (2 words)
 
 ## Release note
 
-**Title:** Undo the changes of one actor in Jira, not the whole site
+**Title:** Agent Rollback: undo what one rule, integration or AI agent changed in Jira Cloud
 
-**Summary:** Agent Rollback lets a Jira Cloud admin find every change made by one actor, preview what will change back, and restore only that. An actor can be a person, an automation rule, an integration or an AI agent. Changes people made after the bad event stay in place.
+**Summary:** When a rule, an integration or an AI agent changes issues it should not have, you no longer have to choose between a whole-site restore and fixing it by hand. Agent Rollback works on Jira Cloud and can undo changes made after your first Rewind backup. Pick the one actor and a time window, see what will change back, then undo just that actor's changes.
 
 **What's new**
-- Actor view: see changes in Jira grouped by who or what made them. [NEED PROOF: how Actor view tells people, automation rules, integrations and AI agents apart]
-- Blast radius preview: before you restore, see which issues, fields and projects will change back and what will stay as is.
-- Selective rollback: undo all changes by one actor in a time window, or pick the issues or fields to undo.
-- Keep human work: changes people made after the bad event are preserved. [NEED PROOF: how a rollback is handled when a person later edited the same issue or field]
-- Audit log: each rollback is recorded (who ran it, what changed, when). The record is exportable for auditors.
+- **Actor view:** See changes in Jira grouped by who or what made them: a person, an automation rule, an integration or an AI agent.
+- **Blast radius preview:** Before you restore anything, see which issues, fields and projects will change back and which will stay as they are.
+- **Selective rollback:** Undo all changes by one actor in a time window, or pick specific issues or fields. No whole-site restore.
+- **Keep human work:** Separate edits people made after the bad event stay in place.
+- **Audit log:** Each rollback is recorded with who ran it, what changed and when. The log can be exported.
 
 **How to get started**
-1. Confirm your site has a Rewind Jira Cloud backup. [NEED PROOF: roles and permissions needed to run a rollback]
-2. Open Actor view [NEED PROOF: navigation path in the Rewind app] and pick the actor.
-3. Choose a time window, or pick specific issues or fields.
-4. Review the blast radius preview.
-5. Restore. Export the audit log if an auditor asks.
+1. [NEED PROOF: how a customer turns the feature on, and whether it needs setup]
+2. Make sure Rewind backup is running on your Jira Cloud site.
+3. Open Actor view. Pick the rule, integration or AI agent and a time window.
+4. Review the preview of what will change back and what will stay.
+5. Roll back all of that actor's changes, or pick specific issues or fields.
+6. Check the audit log entry for the rollback.
 
-**What to know**
-- Only changes made after your first Rewind backup can be rolled back.
-- Attachments deleted by an agent are restored from the most recent backup, which may be up to 24 hours old.
-- Rewind sits on top of Atlassian's native Backup and Restore, which works at the site level. Keep using native for a full-site recovery.
-
-**Availability:** Jira Cloud only at launch. Confluence is on the roadmap, no date committed. [NEED PROOF: sign-off to mention Confluence roadmap publicly] Agent Rollback is included in Rewind's Jira Cloud backup plans at a specific tier, so not every plan has it. [NEED PROOF: plan names and pricing] Available from [NEED PROOF: GA date].
-
----
+**Availability and known limits**
+- Works on Jira Cloud.
+- Can undo changes made after your first Rewind backup.
+- Covers issues and fields.
+- Attachments deleted by an agent are restored from the most recent backup, which may be up to 24 hours old. [NEED PROOF: plain wording for the attachment limitation, including the 24-hour phrase]
+- Included in Rewind's Jira Cloud backup plans at a specific plan tier.
 
 ## LinkedIn post
-Audience: admins and IT leaders outside the customer base. Limits written first, hook and body fitted around them. Under 120 words (about 108).
 
-Picture an agent reclassifying 4,000 Jira issues. Restore the whole site, or fix them by hand?
+A rule, an integration or an AI agent changed issues it should not have. Restore the whole site, or fix it by hand?
 
-Agent Rollback finds what one actor changed, previews what changes back, and undoes only that. Your team's later work stays. Each rollback is logged and exportable for auditors.
+Agent Rollback lets you pick the one actor and a time window. See what will change back before you restore anything. Separate edits people made after the bad event stay in place. Every rollback is logged.
 
-The limits, up front:
-- Only changes after your first Rewind backup can be rolled back.
-- Attachments deleted by an agent are restored from the most recent backup, which may be up to 24 hours old.
-- Jira Cloud only at launch. Confluence on the roadmap, no date committed.
-- Included at a specific plan tier, so not every plan has it.
+Limits: Jira Cloud, changes after your first Rewind backup, issues and fields. Attachments deleted by an agent are restored from the most recent backup, which may be up to 24 hours old. Included at a specific plan tier.
 
-[NEED PROOF: destination link]
+Read the release note: [link]
 
-Hashtags: none. Sign-off needed on the Confluence line: [NEED PROOF: sign-off to mention Confluence roadmap publicly]
+(Count: 112 words, under 120. No hashtags, no emojis.)
 
-**LinkedIn image, on-image text (verbatim, 28 words):**
-- Headline: Undo one agent's changes, not the whole site.
-- Sub-line: Keep your team's work.
-- Footer strip: Jira Cloud only at launch. Only changes after your first Rewind backup. Not on every plan.
+## On-image text
 
----
+Written to be rendered unchanged. Counts include the wordmark "Rewind". The email header, in-app banner and LinkedIn image carry no limitations, disclaimers, plan caveats or "only" claims. Those sit in the copy above.
 
-## One-pager layout, on-image text (verbatim, 42 words)
-For the sales one-pager visual. Design uses this text as written.
+### Email header (13 words)
+- Wordmark: Rewind
+- Headline: Undo the one change, not the whole site.
+- Supporting line: Agent Rollback for Jira
 
-- Headline: Undo one agent's changes, not the whole site. (8 words)
-- Limits box title: What to know (3 words)
-- Limits box lines (15 words):
-  - Attachments: backup up to 24 hours old.
-  - Confluence: roadmap, no date. [NEED PROOF: sign-off to mention Confluence roadmap publicly]
-  - Not on every plan.
-- Footer: Jira Cloud only at launch. Only changes after your first Rewind backup can be rolled back. (16 words)
+### In-app banner (13 words)
+- Wordmark: Rewind
+- Headline: Undo what one rule or AI agent changed.
+- Supporting line: See the effect first.
 
-**Approved exception to the 30-word cap:** the one-pager is 42 words. It is a print layout with a must-say limits box, and limits come first per lessons. The cap still applies to the other three visuals.
+### LinkedIn image (17 words)
+- Wordmark: Rewind
+- Headline: Undo the one actor, not the whole site.
+- Supporting line: See what will change back before you restore.
 
-## Body for the sales one-pager (not on the visual)
-The full one-pager body, with the four limits and objection handling, is in `09-sales-enablement.md`. The block text below is source material for it, not on-image text.
+### One-pager layout (28 words)
+- Wordmark: Rewind
+- Headline: Undo what one rule or AI agent changed.
+- Supporting line: See what changes back first.
+- Small limits line (the only visual allowed one): Jira Cloud. Changes after your first Rewind backup. Issues and fields. Specific plan tier.
 
-- Block 1 title: Undo the one actor
-- Block 1 text: See changes grouped by who or what made them. Undo one actor's changes in a time window, or pick the issues or fields.
-- Block 2 title: Keep your people's work
-- Block 2 text: Preview which issues, fields and projects change back and what stays as is.
-- Block 3 title: A recovery plan to show an approver
-- Block 3 text: Each rollback is recorded. The record is exportable for auditors.
-- Positioning line (body only): Rewind sits on top of Atlassian's native Backup and Restore, which works at the site level.
+## Notes for the reviewer and design
 
----
-
-## Self-check
-- Four limits present in the email, in-app, LinkedIn, release note and one-pager. Confluence roadmap is omitted only from the in-app message and banner, and flagged everywhere else pending sign-off.
-- Email subjects 44 and 32 characters, preview 71. In-app headline 7 words, body 24, button 3.
-- On-image words: email header 24, banner 22, LinkedIn image 28, one-pager 42. The first three are at or under 30. The one-pager is an approved exception to the 30-word cap (print layout with a must-say limits box, limits first). Its box lines are listed in the one-pager block above.
-- No em dashes, exclamation marks, banned words, plan name, price or date.
-- "Under 24 hours" does not appear. No claim that native lacks actor-based rollback. No third-party claims. No customer data. The 4,000 issues figure is the PRD illustration, framed as "picture".
-- Open flags: GA date, plan names and pricing, links, Confluence sign-off, actor-type detection, conflict handling, permissions, audit log legal review.
+- The attachment limit does not fit the one-pager's one small line within 30 words. It must be carried in the one-pager body copy in 09-sales-enablement.md. The in-app body carries it in shortened form ("latest backup" for "most recent backup", "Agent-deleted" for "deleted by an agent") to fit 25 words. The attachment wording is still an open item. [NEED PROOF: plain wording for the attachment limitation, including the 24-hour phrase]
+- The next step is the release note because how a customer turns the feature on is unknown. [NEED PROOF: how a customer turns the feature on, and whether it needs setup]
+- The Confluence roadmap line is left out of every asset. It needs Legal sign-off and none of these assets mention Confluence.
+- "Exportable for auditors" is not used. Copy says "can be exported".
+- Brand hex codes and typeface are unconfirmed, so no visual leaves the team yet. [NEED PROOF: confirm brand hex codes and typeface]

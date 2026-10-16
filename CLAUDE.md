@@ -1,12 +1,12 @@
 # Launch CoPilot
 
-An agentic launch system for product marketing. A PRD goes in. A complete, tier-appropriate launch kit comes out, built on real positioning and messaging, and reviewed against the company's voice before anyone sees it. One agent, the Sales Enablement Lead, stays on after the launch to answer reps and prepare their calls.
+An agentic launch system for product marketing. A closed beta handoff goes in. A complete, tier-appropriate launch kit comes out, built on real positioning and messaging, and reviewed against the company's voice before anyone sees it. One agent, the Sales Enablement Lead, stays on after the launch to answer reps and prepare their calls.
 
 ## Ground rules for every run
 
-1. **Context first.** Before writing anything, read everything in `context/` (the marketing brain) and `learnings/lessons.md`. Every claim, message and asset must trace back to those files or to the PRD. Never invent customer names, metrics, quotes, prices or dates.
-2. **Missing proof gets flagged, not faked.** If an asset needs a proof point that isn't in `context/proof-points.md` or the PRD, write `[NEED PROOF: what is needed]` in its place.
-3. **Each step builds on the last.** The chain runs in order: launch brief, PRD context, audience, positioning, messaging, campaign strategy. Copy, design, sales and ops assets build from messaging and campaign strategy. Nothing downstream may contradict what is upstream.
+1. **Context first.** Before writing anything, read everything in `context/` (the marketing brain) and `learnings/lessons.md`. Every claim, message and asset must trace back to those files or to the closed beta handoff. Never invent customer names, metrics, quotes, prices or dates.
+2. **Missing proof gets flagged, not faked.** If an asset needs a proof point that isn't in `context/proof-points.md` or the closed beta handoff, write `[NEED PROOF: what is needed]` in its place. Closed beta stats and quotes are internal evidence, not approved proof: they shape the audience and positioning, and need approval before any customer-facing use.
+3. **Each step builds on the last.** The chain runs in order: launch brief, product context, audience, positioning, messaging, campaign strategy. Copy, design, sales and ops assets build from messaging and campaign strategy. Nothing downstream may contradict what is upstream.
 4. **Positioning before copy.** Positioning follows April Dunford's method (Obviously Awesome), in order, with no fill-in-the-blank statement. Messaging derives from positioning. Copy derives from messaging.
 5. **Tier decides scope.** The `campaign-strategy-agent` scores the release with `context/tiering.md` and decides the tier. Downstream agents only produce what that tier calls for. Doing less, on purpose, is part of the job.
 6. **Nothing ships unreviewed.** Every run ends with the `reviewer-agent`. Assets that fail get one revision pass and a re-review. Anything still failing is listed in the run report as needing a human.
@@ -30,7 +30,7 @@ After a launch, reps can use the Sales Enablement Lead at any time:
 
 ## Map of the system
 
-- `context/` : the marketing brain and source of truth. Company, personas, voice, tiering rubric (the GTM playbook), proof points.
+- `context/` : the marketing brain and source of truth. Company, personas, voice, brand, tiering rubric (the GTM playbook), proof points.
 - `.claude/commands/launch.md` : the orchestrator. Sequences the agents and owns the run report.
 - `.claude/commands/ask-enablement.md`, `.claude/commands/call-prep.md` : on-demand modes of the Sales Enablement Lead.
 - `.claude/agents/` : eleven specialist agents, each with one job.
@@ -43,7 +43,7 @@ After a launch, reps can use the Sales Enablement Lead at any time:
 | Step | Agent | Output |
 |---|---|---|
 | 1 | `launch-brief-agent` | `01-launch-brief.md` |
-| 2 | `prd-context-agent` | `02-launch-context.md` |
+| 2 | `product-context-agent` | `02-launch-context.md` |
 | 3 | `audience-agent` | `03-audience.md` |
 | 4 | `positioning-agent` | `04-positioning.md` |
 | 5 | `messaging-agent` | `05-messaging.md` |

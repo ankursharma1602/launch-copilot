@@ -1,73 +1,63 @@
 # Audience: Agent Rollback for Jira
 
-> The PRD marks this as a hypothetical release. Personas in `context/personas.md` are demo personas, inferred from public positioning. Validate against real customer research before relying on them. No persona is added here. The three below are sharpened for this launch.
+**Builds on:** 01-launch-brief.md, 02-launch-context.md | **Personas from:** context/personas.md (no new personas added)
+
+> Closed beta feedback is mock, internal and from a small group (11 enabled accounts). It is used here to test the personas, not as proof. Say "in closed beta" when citing it. Nothing from it is approved for customer-facing use. [NEED PROOF: approval to use closed beta results or quotes]
 
 ## Primary persona: The Atlassian admin
 
-- **Why primary:** The PRD names Jira Cloud admins as the primary user. Every capability (Actor view, Blast radius preview, Selective rollback, Keep human work) is something the admin does with their hands. The admin is also the person who gets looked at when an agent or automation goes wrong, and the one who has to choose today between a whole-site restore and a manual fix. The admin is the one who will open Actor view, so the adoption metric depends on them.
-- **Trigger moment:** An automation rule or AI agent has made a large number of wrong changes and someone has noticed. The PRD's own scale examples describe it: an agent reclassifies 4,000 issues, or an automation overwrites a custom field across 30 projects. These are illustrations of the problem, not customer data. A second trigger comes before any bad day: the admin is asked to put another agent or automation into Jira and wants to know they can undo it. In both cases the question is the same: "Can I undo just this, without losing everyone else's work since the last backup?"
+- **Why primary:** This is the person who runs the rollback and lives with the result. The launch is built for them: find what one actor changed, see the effect first, undo it, leave people's work alone. The brief's problem statement (restore the whole site or fix by hand) is their problem. `context/personas.md` already lists them as the primary user, and closed beta agrees.
+- **What closed beta showed:** In closed beta, the clearest value came from Jira admins in financial services, manufacturing and healthcare who were cleaning up after bad changes. Two of the three roles that spoke up about value were admins, and they talked about preview and keeping people's work. This confirms the persona file. One difference: the persona file and the product pitch lean toward AI agents, but in closed beta more rollbacks were on automation rules (12 of 23) than on AI agents (8 of 23), and a healthcare admin said most of their bad changes come from rules. So for this persona, lead with "the one actor that went wrong", whether that is a rule, an integration or an agent. Treat AI agents as the growing case, not the only one. This is a small mock sample, so it is a reason to widen the wording, not a market finding.
+- **Trigger moment:** A rule, integration or agent has changed many issues or fields across projects, and the admin now has to decide between restoring the whole site and fixing by hand. In closed beta, customers described this as "the bad Tuesday" when one rule overwrote a field across many projects, and the dread of that call. A second trigger: the company is about to roll out AI agents in Jira Cloud and the admin will be the one asked "what if it goes wrong?"
 - **What they own / fear / want:**
-  - Owns: uptime, configuration, permissions, migrations, automations, and increasingly the AI tools wired into Jira.
-  - Fears: something breaks at scale and they cannot undo it without restoring the whole site. They are the person everyone looks at.
-  - Wants: a fast, surgical restore, and proof they can recover before the bad day happens.
-- **Their words:** "roll back," "restore," "automation rule," "bulk change," "sandbox," "RPO." Add the object names admins use: issues, fields, projects. Use "undo the one change, not the whole site" from `context/voice.md`.
-- **What turns them off:** Fear-mongering. Vague "peace of mind" copy. Anything that reads as if it was not written by someone who has run Jira. Also: a launch that hides the limits (changes only after the first Rewind backup, attachments up to 24 hours old). Admins find these out on the bad day, so say them up front.
+  - Owns: uptime, configuration, permissions, automations and increasingly the AI tools wired into Jira (`context/personas.md`).
+  - Fears: something breaks at scale and they cannot undo it without losing everyone's legitimate work. They are the person everyone looks at.
+  - Wants: a surgical undo, and to know what will change before it changes.
+- **Their words:**
+  - Closed beta (role-attributed, short phrases only): a financial services admin talked about "two choices" and dreading the call. A second financial services admin said "nothing was a surprise" after the preview. A manufacturing admin said the part that sold the team was that people's later changes stayed in place. A healthcare admin said most bad changes come from "rules, not agents".
+  - Persona file: "roll back," "restore," "automation rule," "bulk change," "blast radius," "undo."
+- **What turns them off:** Fear-mongering, vague reassurance, copy that does not sound like someone who has run Jira, and any "undo everything" claim that hides the limits. They will check the first-backup limit and the attachment limit, so state both plainly. In closed beta two accounts did not at first understand the first-backup limit, and one admin wanted the attachment limit clearer.
 
 ## Secondary persona: The IT or security leader
 
-- **Why:** The PRD names IT and security leaders as secondary: they must approve AI rollouts and want a recovery plan before they say yes. They hold the approval and the budget, and the plan tier decides the expansion goal. Audit log and Blast radius preview speak to their needs (accountability, evidence for auditors, nothing that adds work for their team). They are secondary because they rarely use the product and they decide on what the admin shows them.
-- **Trigger moment:** An AI or automation rollout lands on their desk for approval and they need a recovery plan first.
-- **What they own / fear / want:** Owns risk, compliance, audit readiness and vendor spend. Fears a data loss event that becomes an audit finding, a customer incident or a board conversation. Wants clear accountability under the shared responsibility model and evidence for auditors.
-- **Their words:** "shared responsibility," "business continuity," "governance," "retention policy," "RTO and RPO."
-- **What turns them off:** Feature lists without risk framing, unclear pricing, anything that adds work for their team. Pricing is an open gap, so do not wave at it. Also do not make audit or compliance claims beyond "exportable for auditors" (see open questions).
-
-## The AI or automation owner: in the buying group, not a lead target
-
-This persona is not primary or secondary here, because the PRD does not name them as a target. They still matter. They are the person who gets to say yes to AI, and Agent Rollback is the safety net that helps them get that yes from IT and security. Their words ("agents," "guardrails," "blast radius," "undo," "human in the loop") can be used in copy aimed at the admin and the IT leader. Never frame them as the cause of the problem. The agent or rule is one actor among several, and people appear in Actor view too.
+- **Why:** They approve, and the brief's pipeline logic depends on them: security and IT leaders want a recovery plan before they approve an AI rollout. In closed beta, a head of IT in healthcare said they need a recovery plan before approving, and named the preview and the audit log as what they would attach to the approval. A platform lead at a software company described the same security question. This supports the persona file, but it is one head of IT in a small mock sample. [NEED PROOF: how often AI governance is a buying reason, no CRM capture today]
+- **Role in the message:** They get the risk framing (accountability, recovery plan, audit evidence). They do not get a separate campaign. The admin carries the message to them.
+- **Watch for:** The same person asked in closed beta who can run a rollback. That is not settled. [NEED PROOF: who can run a rollback]. Do not state a permission model.
 
 ## Best-fit segments
 
-Signals are things a salesperson or marketer could observe. Criteria come from the PRD and `context/`. No sizes, shares or counts are stated, because none are sourced.
+All signals are things a salesperson or marketer could observe or ask. Sizes and shares are not sourced. [NEED PROOF: number of Rewind Jira Cloud customers in each segment]
 
 | Segment | Signals to look for | Why they fit | Evidence |
 |---|---|---|---|
-| Jira Cloud customers running AI agents in Jira | Rolling out or already running AI agents that edit issues. The admin or platform lead mentions agents, "human in the loop" or guardrails. | The PRD's primary segment: companies using AI agents. Agents edit at a scale no human does. | PRD, Who it's for and Problem. Size: [NEED PROOF: number of Rewind Jira Cloud customers running AI agents] |
-| Jira Cloud customers with heavy automation | Many automation rules, bulk changes or integrations that write to issues or custom fields across projects. | The PRD's primary segment also names "heavy automation." | PRD, Who it's for. Size: [NEED PROOF: number of customers with heavy automation, and how "heavy" is defined] |
-| Existing Rewind Jira Cloud backup customers | Already has a Rewind Jira Cloud backup in place. | Agent Rollback needs a Rewind Jira Cloud backup, and only changes after the first backup can be rolled back. It is also an upgrade path inside the plan. | PRD, Availability and Known limitations. `02-launch-context.md`, Dependencies. Plan mix: [NEED PROOF: current plan mix] |
-| Companies where IT or security must approve AI rollouts | An AI governance review, a recovery plan requirement, or an IT or security approver in the AI project. | The PRD names this group as secondary, and its pipeline metric tracks AI governance as a buying reason. | PRD, Who it's for and Success metrics. Whether the CRM can capture it: [NEED PROOF: revenue operations confirmation] |
-| Regulated organizations that need audit evidence | Customers in financial services, healthcare or manufacturing, with an auditor asking for records of changes. | The audit log is exportable for auditors. Rewind customers include these industries. | `context/proof-points.md` (industries only). Do not claim the log meets any audit standard: [NEED PROOF: audit log retention, export format and standards] |
-| Jira Cloud migrating teams adding automation and AI after the move | Recently moved to Atlassian cloud and now adding automation or agents. | Ties to growth driver 1 in `context/company.md`. | How much it helps migration-led deals is not stated in the PRD: [NEED PROOF: migration-led fit] |
-
-Segment rule: all segments need Jira Cloud. Jira Cloud is the only platform at launch. Confluence is on the roadmap with no date, so do not build a Confluence segment.
+| Jira Cloud sites with heavy automation | Many automation rules or bulk changes across several projects. Admin talks about rules overwriting fields. | Closed beta rollbacks were mostly on automation rules. The scale example in the handoff is a rule changing a custom field across 30 projects. | Closed beta feedback (mock, small sample); handoff epic and demo notes |
+| Teams rolling out AI agents in Jira Cloud | Pilot or planned rollout of AI agents. A platform or productivity lead needs IT or security sign-off. | Growth driver 3 in `context/company.md` (AI usage). In closed beta, a platform lead said the feature gave them an answer for security and let them say yes. | `context/company.md`; closed beta feedback (mock) |
+| Regulated industries on Jira Cloud | Financial services, healthcare or manufacturing. Audit readiness named as a concern. | These industries are named customers types in `context/proof-points.md` and were in the closed beta group. The audit log is part of the build. | `context/proof-points.md`; closed beta company types (mock) |
+| Existing Rewind Jira Cloud backup customers | Rewind backup already running on the Jira Cloud site. | Rollback only covers changes after the first Rewind backup, and the feature is included in Jira Cloud backup plans at a higher tier. | Handoff limitations and availability. Plan tier: [NEED PROOF: plan names and pricing] |
+| Sites with very large size or unusual data types | Sites above Atlassian's size limits, or needs beyond issues and fields. | Not a confirmed fit. Behavior is unknown. Ask first, do not assume. | [NEED PROOF: behavior on sites above Atlassian's size limits]; [NEED PROOF: confirmed list of rollback-able Jira data types] |
 
 ## Buying group
 
 | Role | Persona | Part in the decision |
 |---|---|---|
-| User | Atlassian admin | Opens Actor view, previews the blast radius, runs the rollback. Starts the conversation and builds the case. |
-| Approver (economic buyer) | IT or security leader | Approves AI rollouts and spend. Wants a recovery plan, evidence for auditors, and a clear plan tier and price before saying yes. |
-| Influencer | AI or automation owner | Wants to deploy agents and needs IT and security approval. Agent Rollback is their safety net. They push for it internally. |
-| Gatekeeper (inferred, not in the PRD) | Legal or compliance reviewer on the customer side | May review "exportable for auditors." [NEED PROOF: whether customers involve compliance reviewers in this purchase] |
-| Channel | Atlassian Marketplace and partners | A route to market named in `context/company.md`. Their part in this purchase is [NEED PROOF: share of Jira buyers who buy through Marketplace or partners]. |
+| User and champion | Atlassian admin | Runs the rollback, finds the problem, makes the case. Primary audience. |
+| Approver | IT or security leader (Head of IT, IT Director, CISO, VP Engineering) | Signs off on the plan tier and on the AI rollout. Wants the recovery plan and audit evidence. Secondary audience. |
+| Influencer | AI or automation owner (platform or productivity lead) | Needs approval to deploy agents. Supports the case because this lets them get to yes. No dedicated message in this launch. |
+| Pricing gate | Not a persona | Plan tier and price are not set. [NEED PROOF: plan names and pricing] |
 
 ## Out of focus for this launch
 
-- **Confluence-only admins and teams.** Confluence is on the roadmap with no committed date. Do not target them or imply coverage.
-- **Teams on other platforms (GitHub, Shopify and the rest of the 16 apps).** This is a Jira Cloud launch.
-- **Jira customers on plans below the tier that includes Agent Rollback, as a first-wave target for direct promotion.** They matter as the upgrade audience, but the tier and price are not named ([NEED PROOF: plan names and pricing]), so no plan-based targeting yet.
-- **The AI or automation owner as a lead audience.** Covered above. They are an ally in the story, not the audience the copy leads with.
-- **Buyers who want to roll back changes made before their first Rewind backup.** The product cannot do that. Do not attract them.
-- **Buyers looking for a full-site restore only.** Rewind sits on top of Atlassian's native Backup and Restore and does not replace it. That need is served by the native tool. Do not frame native as unreliable.
-- **Individual people as a target.** The product covers changes by people too, but the launch is about agents, rules and integrations. Not a person-monitoring tool.
+- **Confluence-only admins and Confluence demand.** The build is Jira Cloud only. Four closed beta accounts asked for Confluence (mock). No date is committed, and Legal must review any mention.
+- **The AI or automation owner as a lead audience.** They are in the buying group and can be named as a beneficiary, but the launch does not lead with them. The closed beta signal for them is one platform lead. Never frame them as the problem. They are the person who gets to say yes to AI.
+- **Teams without Rewind backup on Jira Cloud.** Rollback depends on the first backup. These buyers need the backup story first, which is not this launch.
+- **Data center or non-Atlassian users.** Not in the handoff.
+- **Buyers who want proof of time saved or ROI.** No such figure exists. [NEED PROOF: any outcome measure]
 
 ## Open questions
 
-- Which customers are in the primary segment? Number of Rewind Jira Cloud customers running AI agents or heavy automation: [NEED PROOF: segment sizes and source].
-- Do these demo personas match real customers? `context/personas.md` says to validate them. [NEED PROOF: customer research].
-- Which Jira or Rewind permission is needed to run a rollback? This decides whether the admin can act alone or needs IT sign-off. [NEED PROOF: roles and permissions].
-- Does the IT or security leader need the plan name and price to move forward? [NEED PROOF: plan names and pricing].
-- Can the CRM capture "AI governance cited as a buying reason"? [NEED PROOF: revenue operations confirmation].
-- Can Actor view tell AI agents apart from automation rules and integrations? Copy for the AI-agent segment depends on it. [NEED PROOF: how Actor view tells actor types apart].
-- Does it work on large sites above Atlassian's size limits? [NEED PROOF: engineering confirmation].
-- Is any customer evidence approved for this audience? None is in `context/proof-points.md`.
-- Must-say limitations (all four from `02-launch-context.md`) apply to every segment. The attachment wording conflict (up to 24 hours vs "under 24 hours") is still open for a human to decide.
+- Is the admin-first order right once real customer research is done? Personas are demo personas, inferred from public positioning. Validate before relying on them. [NEED PROOF: customer research]
+- Do automation rules matter more than AI agents beyond this small beta? Needs a source beyond mock closed beta feedback. [NEED PROOF: share of bad changes from rules versus agents]
+- Who is allowed to run a rollback, and how does the IT or security leader sign off? [NEED PROOF: who can run a rollback]
+- Can the closed beta language be used outside the company? Customers have not agreed. [NEED PROOF: approval to use closed beta results or quotes]
+- How do we find best-fit accounts in the CRM, given AI governance as a buying reason is not captured? [NEED PROOF: CRM capture of "AI governance cited as a buying reason"]
+- Does the admin's trigger differ for AI agents versus rules versus integrations? Actor view detection is not documented, so do not claim how it tells them apart. [NEED PROOF: how Actor view identifies person, rule, integration and AI agent]

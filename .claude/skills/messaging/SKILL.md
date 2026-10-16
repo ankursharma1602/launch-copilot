@@ -9,7 +9,7 @@ Messaging is how positioning sounds. Every message here must trace back to `04-p
 
 ## Method
 1. Write the core message: one sentence, what the customer gets. Problem first, then capability, then proof.
-2. Write three value pillars. Each comes from a row in the positioning's value and proof table. Each has a claim, a proof (approved, from the PRD, or `[NEED PROOF: ...]`) and the source.
+2. Write three value pillars. Each comes from a row in the positioning's value and proof table. Each has a claim, a proof (approved, from the closed beta handoff, or `[NEED PROOF: ...]`) and the source.
 3. For each persona in `03-audience.md`, write an angle: what to lead with, which pillar, which words, which proof, what to avoid.
 4. Write the "Must say" list: the limitations from `02-launch-context.md` that every asset repeats, in the exact wording to use.
 5. List vocabulary: words to use (admin language) and words to avoid (`context/voice.md` banned list, plus any term the positioning rules out).

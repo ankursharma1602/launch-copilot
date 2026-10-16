@@ -14,7 +14,7 @@ Follow `.claude/skills/channel-copy/SKILL.md`. Produce only the copy assets the 
 
 ## Rules
 - The core message and value pillars in `05-messaging.md` are fixed. Do not invent new ones.
-- Use only approved proof points or facts from the PRD. Otherwise `[NEED PROOF: ...]`.
+- Use only approved proof points or facts from the closed beta handoff. Otherwise `[NEED PROOF: ...]`.
 - Write for the primary persona in `03-audience.md`.
-- Put the "Must say" limitations from `05-messaging.md` into every asset first, then fit the other words around them. Short assets drop them if you leave them for last.
+- Put the "Must say" limitations from `05-messaging.md` into every asset first, then fit the other words around them. Short assets drop them if you leave them for last. This applies to the written copy. On-image text for the email header, in-app banner and LinkedIn image carries no limitations or disclaimers (they stay in the copy beside the image). Only the one-pager layout may carry one small limits line.
 - If you were sent reviewer notes, fix exactly those issues and change nothing else.
