@@ -9,13 +9,13 @@
 
 ## Customer email
 
-**Subject A:** Undo the one change, not the whole site (38 characters)
+**Subject A:** Undo the one change, not the whole site (39 characters)
 **Subject B:** Undo what one rule or AI agent changed in Jira (46 characters)
-**Preview:** Undo one actor's changes in Jira Cloud, see the effect first. (61 characters)
+**Preview:** Undo one rule or agent's changes in Jira Cloud. See the effect first. (69 characters)
 
 A rule, an integration or an AI agent changed issues it should not have. You could restore the whole site and lose your team's work, or fix it by hand.
 
-With Agent Rollback, pick the one actor and a time window. See which issues, fields and projects will change back, and which will stay. Then undo that actor's changes. Separate edits people made after the bad event stay in place. Each rollback is logged with who ran it, what changed and when. The log can be exported.
+With Agent Rollback, pick the one rule, integration or agent and a time window. See which issues, fields and projects will change back, and which will stay. Then undo just its changes. Separate edits people made after the bad event stay in place. Each rollback is logged with who ran it, what changed and when. The log can be exported.
 
 Good to know:
 - Works on Jira Cloud. It can undo changes made after your first Rewind backup.
@@ -25,7 +25,7 @@ Good to know:
 
 **CTA:** Read the release note [link]
 
-(Body word count: 140 plus 4 for the CTA, under 150.)
+(Body word count: about 143 plus 4 for the CTA, under 150.)
 
 ## In-app message
 
@@ -37,21 +37,21 @@ Good to know:
 
 **Title:** Agent Rollback: undo what one rule, integration or AI agent changed in Jira Cloud
 
-**Summary:** When a rule, an integration or an AI agent changes issues it should not have, you no longer have to choose between a whole-site restore and fixing it by hand. Agent Rollback works on Jira Cloud and can undo changes made after your first Rewind backup. Pick the one actor and a time window, see what will change back, then undo just that actor's changes.
+**Summary:** When a rule, an integration or an AI agent changes issues it should not have, you no longer have to choose between a whole-site restore and fixing it by hand. Agent Rollback works on Jira Cloud and can undo changes made after your first Rewind backup. Pick the one rule, integration or AI agent and a time window, see what will change back, then undo just its changes.
 
 **What's new**
-- **Actor view:** See changes in Jira grouped by who or what made them: a person, an automation rule, an integration or an AI agent.
-- **Blast radius preview:** Before you restore anything, see which issues, fields and projects will change back and which will stay as they are.
-- **Selective rollback:** Undo all changes by one actor in a time window, or pick specific issues or fields. No whole-site restore.
-- **Keep human work:** Separate edits people made after the bad event stay in place.
-- **Audit log:** Each rollback is recorded with who ran it, what changed and when. The log can be exported.
+- **See who or what made changes to issues and fields:** Changes to issues and fields are grouped by a person, an automation rule, an integration or an AI agent.
+- **See what will change back before you restore:** Check which issues, fields and projects will change back and which will stay as they are.
+- **Undo only what one rule, integration or agent changed:** Pick a time window, or pick specific issues or fields. No whole-site restore.
+- **Keep the work people did separately:** Separate edits people made after the bad event stay in place.
+- **Know who ran each rollback:** Each rollback is recorded with who ran it, what changed and when. The log can be exported.
 
 **How to get started**
 1. [NEED PROOF: how a customer turns the feature on, and whether it needs setup]
 2. Make sure Rewind backup is running on your Jira Cloud site.
-3. Open Actor view. Pick the rule, integration or AI agent and a time window.
+3. [NEED PROOF: in-product path to start a rollback] Pick the rule, integration or AI agent and a time window.
 4. Review the preview of what will change back and what will stay.
-5. Roll back all of that actor's changes, or pick specific issues or fields.
+5. Undo all of its changes, or pick specific issues or fields.
 6. Check the audit log entry for the rollback.
 
 **Availability and known limits**
@@ -65,13 +65,13 @@ Good to know:
 
 A rule, an integration or an AI agent changed issues it should not have. Restore the whole site, or fix it by hand?
 
-Agent Rollback lets you pick the one actor and a time window. See what will change back before you restore anything. Separate edits people made after the bad event stay in place. Every rollback is logged.
+Agent Rollback lets you pick the one rule, integration or agent and a time window. See what will change back before you restore anything. Separate edits people made after the bad event stay in place. Every rollback is logged.
 
 Limits: Jira Cloud, changes after your first Rewind backup, issues and fields. Attachments deleted by an agent are restored from the most recent backup, which may be up to 24 hours old. Included at a specific plan tier.
 
 Read the release note: [link]
 
-(Count: 112 words, under 120. No hashtags, no emojis.)
+(Count: about 105 words, under 120. No hashtags, no emojis.)
 
 ## On-image text
 
@@ -101,7 +101,7 @@ Written to be rendered unchanged. Counts include the wordmark "Rewind". The emai
 ## Notes for the reviewer and design
 
 - The attachment limit does not fit the one-pager's one small line within 30 words. It must be carried in the one-pager body copy in 09-sales-enablement.md. The in-app body carries it in shortened form ("latest backup" for "most recent backup", "Agent-deleted" for "deleted by an agent") to fit 25 words. The attachment wording is still an open item. [NEED PROOF: plain wording for the attachment limitation, including the 24-hour phrase]
-- The next step is the release note because how a customer turns the feature on is unknown. [NEED PROOF: how a customer turns the feature on, and whether it needs setup]
+- The next step is the release note because how a customer turns the feature on is unknown. [NEED PROOF: how a customer turns the feature on, and whether it needs setup] [NEED PROOF: in-product path to start a rollback]
 - The Confluence roadmap line is left out of every asset. It needs Legal sign-off and none of these assets mention Confluence.
 - "Exportable for auditors" is not used. Copy says "can be exported".
 - Brand hex codes (including the yellow) and typeface are unconfirmed, so no visual leaves the team yet. [NEED PROOF: confirm brand hex codes and typeface]

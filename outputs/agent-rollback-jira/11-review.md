@@ -179,3 +179,85 @@ Pass. It carries [NEED PROOF: confirm brand palette and typeface with Rewind's b
 4. Palette, typeface and yellow hex stay unconfirmed. No visual leaves the team until the brand team confirms.
 
 No visual needs a revision. No fixes required.
+
+## Copy revision review
+Scope: 07-channel-copy.md after the copywriter swapped internal terms for customer words. No shell tool was available, so I could not run `git diff`. I read the whole file and checked it against 02-launch-context.md, voice.md and the four SVGs. Because I could not see the diff, I confirmed intact items by presence and wording, not by comparing to the old text. All counts by hand.
+
+**Result: FAIL, two small fixes (1 and 2 below). Everything else passes.**
+
+### Mechanical checks (Grep on 07)
+- Em dashes, en dashes, exclamation marks: 0.
+- Banned words from voice.md: 0.
+- Internal terms (actor, Actor view, blast radius, selective rollback, keep human work): 0 anywhere in the file, including the notes. Advisory item 2 above is closed.
+- "under 24", "every change", "everything", beta numbers (11, 14, 23, 4,000), quotes: 0.
+
+### Lengths
+| Item | Count | Limit | Result |
+|---|---|---|---|
+| Subject A "Undo the one change, not the whole site" | 39 characters (file says 38) | under 50 | Pass, fix the stated count |
+| Subject B "Undo what one rule or AI agent changed in Jira" | 46 | under 50 | Pass |
+| Preview | 69 | under 90 | Pass |
+| Email body (two paragraphs 30 + 60, Good to know 53, CTA 5) | 143 without CTA, 148 with CTA | under 150 | Pass, tight |
+| In-app headline | 7 words | under 8 | Pass |
+| In-app body | 24 words | under 25 | Pass |
+| LinkedIn post (23 + 39 + 38 + 5) | 105 (file says about 115) | under 120 | Pass, fix the stated count |
+
+The email has only 2 words of room. Any edit to the body must come with a recount.
+
+### Intact items
+- Limitations in the email, in-app, release note and LinkedIn: Jira Cloud, after the first Rewind backup, issues and fields, specific plan tier. Present in each.
+- Attachment wording is "restored from the most recent backup, which may be up to 24 hours old" in the email, release note and LinkedIn. The in-app body shortens it to "come from the latest backup, which may be up to 24 hours old" and the notes say so. Never "under 24 hours". Pass.
+- [NEED PROOF] tags present: how to turn the feature on (release note step 1 and notes), plain wording for the attachment limitation (release note and notes), brand hex and typeface (notes). Pass.
+- On-image text matches the SVGs word for word: email header, in-app banner, LinkedIn image (curly apostrophe only) and one-pager, including the one-pager limits line. Word counts 13, 13, 17, 28 are correct. Pass.
+- Confluence not mentioned. "Exportable for auditors" not used (copy says "can be exported"). Pass.
+
+### Meaning and overclaim
+- "Undo just its changes", "No whole-site restore" and "Separate edits people made after the bad event stay in place" match the handoff capabilities (undo all changes by one source in a window, or pick issues or fields; demo showed separate edits kept). Pass. The same-field case is not claimed anywhere. Pass.
+- "Keep your team's work" (release note bullet heading) is broader than the demo, but the sentence under it limits it to "Separate edits people made after the bad event". Pass. Advisory: "Keep the work people did separately" is safer, since the heading alone could be read as covering same-field edits.
+- No permission model, no detection explanation, no outcome measure. Pass.
+
+### Fixes required
+1. **Release note, How to get started, step 3: "Open Agent Rollback. Pick the rule, integration or AI agent and a time window."** This is a guess presented as a UI path. The handoff gives no place, menu or screen for the feature, and step 1 already says how to turn it on is unknown. The old wording used a handoff screen name. "Open Agent Rollback" implies a named screen that nobody has confirmed. Change to: `3. [NEED PROOF: in-product path to start a rollback] Pick the rule, integration or AI agent and a time window.` Add the same tag to the notes section next to the step 1 tag. Do not name a screen, tab or button.
+2. **Release note, What's new, first bullet: "Changes in Jira are grouped by a person, an automation rule, an integration or an AI agent."** "Changes in Jira" with the bullet title "each change" reads as every change, which limitation 4 forbids. Change the title to "See who or what made changes to issues and fields" and the body to "Changes to issues and fields are grouped by a person, an automation rule, an integration or an AI agent."
+3. (Count corrections, no re-review needed) Subject A is 39 characters, not 38. The LinkedIn count line should say about 105 words, not 115.
+
+### Advisory (non-blocking)
+- In-app body opens with the fragment "Jira Cloud, after your first backup." It is correct but reads as a label. If the copywriter can keep 24 words or fewer, "Works on Jira Cloud, after your first backup." is 8 words and takes the body to 26, which is over the limit. Leave as is.
+- "Specific plan tier" stays awkward until pricing is confirmed. Held by the plan-name proof request above.
+
+Re-review needed for fixes 1 and 2 only. After they are made, the file passes.
+
+## Copy revision second pass
+Scope: 07-channel-copy.md after the copywriter applied fixes 1 to 3 above. Checked with Grep and a hand count. The four SVGs were read as source text. No shell tool, so no `git diff`; unchanged items were confirmed by presence and wording.
+
+**Result: PASS.** No fixes required.
+
+### Fix checks
+| Check | Result |
+|---|---|
+| Release note step 3 | Pass. Now "3. [NEED PROOF: in-product path to start a rollback] Pick the rule, integration or AI agent and a time window." No screen, tab or button is named. |
+| Same tag in the notes section | Pass. Notes line 104 carries it next to the step 1 tag. |
+| First What's new bullet scoped | Pass. "See who or what made changes to issues and fields: Changes to issues and fields are grouped by a person, an automation rule, an integration or an AI agent." |
+| Subject A count | Pass. Says 39 characters. Hand count is 39. |
+| LinkedIn count | Pass. Says about 105 words. Hand count: 23 + 39 + 38 + 5 = 105. Under 120. |
+| Email body count | Pass. Hand count: paragraph one 30, paragraph two 60, Good to know 52, so 142 without the CTA. The CTA is 4 or 5 words, so 146 to 147 with it. Under 150. The note "about 143 plus 4" is within one or two words of true. No breach. |
+| Preview | Pass. 69 characters, as stated. |
+| "Keep the work people did separately" | Pass. The sentence under it is "Separate edits people made after the bad event stay in place." That is the demonstrated case only. It does not cover same-field edits and promises nothing broader. |
+
+### Nothing else changed
+- Must say limitations: Jira Cloud, changes after the first Rewind backup, issues and fields, specific plan tier. All present in the email, in-app, release note and LinkedIn post.
+- Attachment wording: "restored from the most recent backup, which may be up to 24 hours old" in the email, release note and LinkedIn. The in-app body keeps its shortened form, with the same 24 of 24 words. Never "under 24 hours". Carried-over advisory 4 (gate 4) still stands.
+- [NEED PROOF] tags: step 1 and notes (turn on), step 3 and notes (path, new), attachment wording in the release note and notes, brand hex and typeface in the notes. None removed.
+- In-app message: headline 7 words, body 24, button 2. Unchanged and within limits.
+- On-image text matches the SVG text word for word in all four visuals, including the one-pager limits line (the LinkedIn apostrophe is curly only). Counts 13, 13, 17, 28 hold.
+
+### Mechanical checks (Grep on 07)
+- Em dashes, en dashes, exclamation marks: 0.
+- Banned words from voice.md: 0.
+- Internal terms (actor, Actor view, blast radius, selective, keep human): 0.
+- "under 24", beta numbers (11, 14, 23, 4,000), quotes: 0.
+
+### Advisory (non-blocking)
+- The pass-one count notes for 07 (items 1 and 2 in the second-pass advisory list) are now closed. The 08 one-pager count (28, not about 29) and the in-app short-form attachment wording remain open.
+
+07-channel-copy.md: **Pass.** It needs no human beyond the open [NEED PROOF] items already collected.
