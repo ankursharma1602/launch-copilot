@@ -11,7 +11,7 @@ Demo input: a hypothetical Rewind release, Agent Rollback for Jira. It is a mock
 ## Setup (about 10 minutes)
 
 1. Install Claude Code if you haven't: `npm install -g @anthropic-ai/claude-code`
-2. Unzip this folder and open a terminal in it.
+2. Clone the repo and open it: `git clone https://github.com/ankursharma1602/launch-copilot.git && cd launch-copilot`
 3. Run `claude`
 4. Type: `/launch inputs/rewind-agent-rollback-jira.md`
 5. Approve file writes when asked. The kit lands in `outputs/agent-rollback-jira/`. Start with `00-run-report.md`.
