@@ -1,15 +1,17 @@
 ---
 name: channel-copy
-description: Write launch copy for email, in-app, release notes, blog outline and LinkedIn, sized to the launch tier and grounded in the launch brief. Use when turning a brief into customer-facing copy.
+description: Write launch copy for email, in-app, release notes, blog outline and LinkedIn, sized to the launch tier and grounded in the messaging. Use when turning messaging and a campaign plan into customer-facing copy.
 ---
 
 # Channel copy
 
 ## Method
-1. Check the asset matrix in `context/tiering.md`. Produce only the assets this tier gets. List the skipped ones at the top so a reader knows it was deliberate.
-2. Every asset leads with the primary persona's moment of failure or desired outcome, then the capability, then proof.
-3. Reuse the brief's key messages. Adapt length and tone to the channel, not the meaning.
-4. Check `learnings/lessons.md` and apply every relevant lesson.
+1. Check the asset matrix in `context/tiering.md` for the tier in `06-campaign-strategy.md`. Produce only the copy assets that tier gets. List the skipped ones at the top so a reader knows it was deliberate.
+2. Write the "Must say" limitations from `05-messaging.md` into each asset first. Then fit the rest around them. Short assets lose limitations when they are added last.
+3. Every asset leads with the primary persona's moment of failure or desired outcome, then the capability, then proof.
+4. Reuse the core message and value pillars. Adapt length and tone to the channel, not the meaning.
+5. Use the persona angle from `05-messaging.md` for the persona each channel reaches.
+6. Check `learnings/lessons.md` and apply every relevant lesson.
 
 ## Channel specs
 | Asset | Spec |
@@ -36,7 +38,15 @@ description: Write launch copy for email, in-app, release notes, blog outline an
 **CTA:** ...
 
 ## In-app message
+**Headline:** ...
+**Body:** ...
+**Button:** ...
+
+## Release note
 ...
 
-(one section per asset)
+## LinkedIn post
+...
+
+(one section per asset the tier gets)
 ```

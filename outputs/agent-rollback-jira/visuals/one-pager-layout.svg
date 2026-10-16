@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2550" height="3300" viewBox="0 0 2550 3300">
+<!-- PLACEHOLDER BRAND COLORS: replace with brand palette. Text #1F2933, background #F3F5F7, accent #2F6FED, neutral blocks #C3CCD6. No logo drawn on purpose. -->
+<!-- Limits box holds short forms of limits 2, 3, 4. Footer carries limits 1 and 3 in full. -->
+<!-- Empty blocks are for body text from 09-sales-enablement.md. The logo area top right is left empty on purpose. -->
+<defs>
+<g id="m">
+<g stroke="#D5DCE3" stroke-width="2"><line x1="-12" y1="98" x2="336" y2="98"/><line x1="-12" y1="150" x2="336" y2="150"/><line x1="-12" y1="202" x2="336" y2="202"/></g>
+<g fill="#C3CCD6">
+<rect x="0" y="84" width="44" height="28" rx="6"/><rect x="224" y="84" width="44" height="28" rx="6"/><rect x="280" y="84" width="44" height="28" rx="6"/>
+<rect x="0" y="136" width="44" height="28" rx="6"/><rect x="56" y="136" width="44" height="28" rx="6"/><rect x="112" y="136" width="44" height="28" rx="6"/><rect x="168" y="136" width="44" height="28" rx="6"/><rect x="224" y="136" width="44" height="28" rx="6"/><rect x="280" y="136" width="44" height="28" rx="6"/>
+<rect x="0" y="188" width="44" height="28" rx="6"/><rect x="56" y="188" width="44" height="28" rx="6"/><rect x="112" y="188" width="44" height="28" rx="6"/><rect x="168" y="188" width="44" height="28" rx="6"/><rect x="224" y="188" width="44" height="28" rx="6"/><rect x="280" y="188" width="44" height="28" rx="6"/>
+</g>
+<g fill="none" stroke="#2F6FED" stroke-width="2" stroke-dasharray="5 4"><rect x="56" y="84" width="44" height="28" rx="6"/><rect x="112" y="84" width="44" height="28" rx="6"/><rect x="168" y="84" width="44" height="28" rx="6"/></g>
+<g stroke="#2F6FED" stroke-width="2" stroke-dasharray="2 5" stroke-linecap="round" opacity="0.6"><line x1="78" y1="50" x2="78" y2="82"/><line x1="134" y1="50" x2="134" y2="82"/><line x1="190" y1="50" x2="190" y2="82"/></g>
+<g fill="#2F6FED"><rect x="56" y="20" width="44" height="28" rx="6"/><rect x="112" y="20" width="44" height="28" rx="6"/><rect x="168" y="20" width="44" height="28" rx="6"/></g>
+</g>
+</defs>
+<rect width="2550" height="3300" fill="#F3F5F7"/>
+<rect x="150" y="190" width="150" height="16" rx="8" fill="#2F6FED"/>
+<g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" fill="#1F2933">
+<text font-size="150" font-weight="700"><tspan x="150" y="430">Undo one agent's changes,</tspan><tspan x="150" y="595">not the whole site.</tspan></text>
+</g>
+<use href="#m" transform="translate(440,830) scale(5)"/>
+<g fill="#FFFFFF" stroke="#D5DCE3" stroke-width="4">
+<rect x="150" y="2000" width="720" height="500" rx="24"/>
+<rect x="915" y="2000" width="720" height="500" rx="24"/>
+<rect x="1680" y="2000" width="720" height="500" rx="24"/>
+</g>
+<g fill="#2F6FED"><rect x="150" y="2000" width="720" height="10" rx="5"/><rect x="915" y="2000" width="720" height="10" rx="5"/><rect x="1680" y="2000" width="720" height="10" rx="5"/></g>
+<rect x="150" y="2580" width="2250" height="470" rx="24" fill="#E4E9EE"/>
+<rect x="150" y="2580" width="14" height="470" fill="#2F6FED"/>
+<g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" fill="#1F2933">
+<text x="220" y="2680" font-size="60" font-weight="700">What to know</text>
+<g font-size="52">
+<text x="220" y="2800">Attachments: backup up to 24 hours old.</text>
+<text x="220" y="2880">Confluence: roadmap, no date.</text>
+<text x="220" y="2960">Not on every plan.</text>
+</g>
+<text font-size="44"><tspan x="150" y="3130">Jira Cloud only at launch.</tspan><tspan x="150" y="3190">Only changes after your first Rewind backup can be rolled back.</tspan></text>
+</g>
+</svg>
