@@ -1,80 +1,213 @@
-# Launch CoPilot run report: Agent Rollback for Jira
+# Agent Rollback for Jira: Launch Plan of Record
 
-**Tier:** 2 (weighted score 3.95), no override. It sits 0.05 below the Tier 1 line.
-**Run time:** about 14 minutes (this run only, after the brand setup)
-**Assets produced:** 16 | **Passed review first time:** 13 | **Revised:** 3 | **Needs a human:** 0 failed twice, but open items below block launch
+Tier 2 launch | Status: draft, ready for review | Owner: Product Marketing | Updated: 2026-10-18
 
-The 16 assets: files 01 to 09c (11), the launch checklist (1), and four visuals. The three first-pass failures were 09, 09b and 09c, each a small wording fix. All passed the second review.
+## 1. Executive summary
+- **What:** Agent Rollback lets a Jira Cloud admin undo everything one rule, integration or AI agent changed, see the effect first, and keep people's own work.
+- **For whom:** Jira admins first. IT and security leaders who approve AI rollouts second.
+- **Why now:** rules and AI agents edit Jira at a scale no person does, and the feature is moving from closed beta to general availability.
+- **Tier and date:** Tier 2, a targeted launch. Target date not set. All dates below count from launch day (L).
+- **Goal:** get eligible Jira customers using it in 30 days, upgrading in 90 days, and give Sales a new story with security buyers.
+- **Decisions needed:** GA date, plan names and pricing, brand sign-off, Legal review, and approval to use beta proof. See section 10.
 
-## The launch in three lines
-Agent Rollback lets a Jira Cloud admin find and undo every change made by one rule, integration or AI agent, without restoring the whole site or touching people's work.
-It is for Jira admins first, and for the IT or security leaders who approve AI rollouts and want a recovery plan.
-It matters now because rules and agents edit Jira at a scale no person does, and the feature is heading from closed beta to GA.
+## 2. Why
+**The customer problem.** When a rule, integration or AI agent changes issues it should not have, admins have two bad options. They restore the whole site and lose everyone's legitimate work since the backup. Or they fix it by hand, issue by issue.
 
-Input is a hypothetical closed beta handoff. The beta stats and customer feedback are mock, not from real customers.
+**The evidence.**
+- In closed beta, admins described this as "the bad Tuesday", when one rule overwrote a field across many projects.
+- They also said the preview and keeping people's later edits were what made them trust it.
+- Rewind's CEO named AI usage as a growth driver: AI agents now act directly on SaaS data, which creates new recovery needs.
+- Closed beta results are internal and from a small group. We do not use them in customer-facing work until customers approve.
 
-## Decisions the system made
-- **Tier 2, score 3.95.** Reach 3, commercial impact 4, strategic fit 5, competitive weight 3, story value 5. Reach is the swing score: one more point gives 4.20 and Tier 1. It scored 3 because the eligible base is unknown (Jira Cloud only, needs Rewind backup, plan tier unnamed). The earlier run, from a thinner PRD, scored 3.55.
-- **Not produced on purpose:** blog post outline, blog hero image, Sales FYI, and any press, event or paid push.
-- **Market category:** backup and recovery for Jira Cloud, specifically selective recovery by actor. "AI agent governance" and "Jira change management" were rejected because the sources do not support them.
-- **Beta feedback shaped the story, not the proof.** In the mock beta, more rollbacks were on automation rules (12 of 23) than on AI agents (8 of 23), and an admin said most bad changes come from rules. So the messaging says "one rule, integration or AI agent", and treats agents as the growing case, not the only one. This is a small mock sample. No beta number or quote appears in any customer-facing asset.
-- **Visuals follow the new rules.** The email header, in-app banner and LinkedIn image carry no limitations or caveats; those sit in the email, in-app message and post beside them. Only the one-pager layout carries one small limits line. Every visual uses `context/brand.md` colours, Cabin, and the word "Rewind" set as live text. No logo file or Boomerang mark is used.
-- **Claims held back:** no statement that Atlassian native "has no actor-based rollback" (unsourced; copy says native works at the site level). No claims about other third-party tools. No "only", "first" or "unique" wording.
-- **Attachment wording:** every asset uses the handoff wording and never pairs Agent Rollback with "under 24 hours".
+**Launch goals and KPIs.** Baselines and targets are not set yet. Product owns setting them before the go/no-go.
 
-## Needs a human
-Blockers. The go/no-go at L-3 needs these (see 06 and 10):
-- GA date: `[NEED PROOF: GA date]` (01, 02, 06, 07, 10)
-- Plan names and pricing: `[NEED PROOF: plan names and pricing]` (all customer-facing assets, which say "a specific plan tier")
-- **Brand palette and typeface are unconfirmed.** `context/brand.md` uses a third-party listing (Blue Zodiac `#16225C`, Link Water `#F5F8FD`, Ebony `#0E102B`, Cabin). rewind.com blocked scripted readers and its brand page needs a login. No visual should leave the team until Rewind's brand team confirms them: `[NEED PROOF: confirm brand palette and typeface with Rewind's brand team]` (context/brand.md, 08, visuals/)
-- Decide the attachment wording: handoff "up to 24 hours old" vs `context/` "under 24 hours" (01, 02, 05, 07, 09)
-- Source or approval for "Atlassian native has no actor-based rollback" (01, 02, 04)
-- Legal review of "exportable for auditors", and sign-off to mention the Confluence roadmap (05, 07, 09)
-- Competitor check on other third-party tools (01, 04, 09)
-- Revenue operations: capture "AI governance cited as a buying reason" in the CRM; product analytics counting Actor view opens (06, 10)
+| Goal | KPI | Read at |
+|---|---|---|
+| Adoption | Share of active Jira customers who open the new activity view within 30 days | L+30 |
+| Expansion | Upgrades to the plan that includes Agent Rollback | L+90 |
+| Pipeline | New opportunities where AI governance is a buying reason | L+90 |
+| Sales readiness | Reps who pass the readiness quiz | L-5 |
 
-Engineering and product unknowns (reps have holding lines in 09):
-- How Actor view tells a person, rule, integration and AI agent apart
-- What happens when a person edited the same field after the agent
-- Which Jira data types beyond issues and fields can be rolled back
-- Who can run a rollback; large-site behavior; audit log contents and export format
-- How a customer turns the feature on (blocks the email CTA and the release note's first step)
+The pipeline KPI cannot be read until Revenue Operations can record the buying reason in the CRM.
 
-Evidence and measurement:
-- Approval to use any closed beta number or quote outside the team: `[NEED PROOF: approval to use closed beta results or quotes]`
-- Baselines, targets and the definition of "active Jira customers" for the three proposed metrics
-- Size of the eligible customer base; quiz pass mark (7 of 8 is proposed only)
-- Boomerang yellow hex, if the brand team wants it used
+## 3. What
+**In plain words.** An admin picks the rule, integration or AI agent that went wrong and a time window. They see exactly what will change back and what will stay. Then they undo it. Each rollback is logged.
 
-Advisory items from review (not fails):
-- 07 Subject A is 39 characters (stated as 38); the LinkedIn post is about 101 words (stated as 112). Both are within spec.
-- 08 says the one-pager is "about 29" words; it is 28.
-- The 07 in-app body shortens the attachment wording to fit 24 words. Go/no-go gate 4 must confirm the short form, or the copy needs trimming to carry the full wording.
-- The 09 FAQ says "Two closed beta accounts did not get this at first" (mock). The reviewer suggests deleting that clause, since it is a beta number. Not changed in this run.
-- The SVGs load Cabin from Google Fonts, so they need internet to show Cabin when opened elsewhere. The PNGs are fixed.
-- `learnings/field-feedback.md` has no entries, so the Sales Enablement Lead had nothing to support or flag.
+**What it does**
+- Groups every change in Jira by who or what made it: a person, a rule, an integration or an AI agent.
+- Shows a preview of which issues, fields and projects will change back, before anything does.
+- Undoes everything one rule, integration or AI agent changed in a time window, or just the issues and fields you pick.
+- Leaves in place the changes people made after the bad event.
+- Records each rollback with who ran it, what changed and when, and lets you export the log.
 
-## Files
-- `01-launch-brief.md`: what is launching, business case, goals, timeline, stakeholders, open questions
-- `02-launch-context.md`: what's built, what closed beta customers said (kept separate), limitations, gaps, conflicts with context/
-- `03-audience.md`: personas tested against closed beta feedback, segments, buying group, out of focus
-- `04-positioning.md`: positioning in order, starting from what beta customers compared it to; category choice
-- `05-messaging.md`: core message, three pillars, persona angles, must-say list, vocabulary
-- `06-campaign-strategy.md`: tier score and decision, channels, assets in scope, one timeline, go/no-go gates, metrics
-- `07-channel-copy.md`: customer email, in-app message, release note, LinkedIn post, on-image text
-- `08-design-briefs.md`: a design brief for each of the four visuals
-- `09-sales-enablement.md`: one-pager, talk track, discovery questions, objections, FAQ, competitive take
-- `09b-enablement-session.md`: 30-minute rep session plan with role-plays
-- `09c-readiness-quiz.md`: 8-question quiz with answer key (pass mark proposed)
-- `10-launch-checklist.csv`: 40 owned, dated tasks for monday.com or Jira
-- `10-launch-checklist.md`: the same checklist, readable, with go/no-go gates mapped to tasks
-- `11-review.md`: first-pass and second-pass review results
-- `visuals/email-header.svg` and `.png`: email header (1200x400)
-- `visuals/in-app-banner.svg` and `.png`: in-app banner (1280x320)
-- `visuals/linkedin-image.svg` and `.png`: LinkedIn image (1200x627)
-- `visuals/one-pager-layout.svg` and `.png`: sales one-pager layout (2550x3300), body blocks empty to fill from 09
+**What it does not do**
+- It only covers changes made after the customer's first Rewind backup.
+- Attachments deleted by an agent are restored from the most recent backup, which may be up to 24 hours old.
+- It works on Jira Cloud only. Confluence is on the roadmap with no date.
+- Beyond issues and fields, we have not confirmed what else can be rolled back.
+- We have not decided what happens when a person edited the same field after the agent. We do not claim anything about it.
+- We do not yet know how it behaves on very large sites, or who is allowed to run a rollback.
 
-## Lessons added this run
-- 2026-10-16 | sales talk track, session plan | A shortened limitation loses words like "by an agent" or "restored" and broadens the limit. Copy the Must say wording from 05-messaging.md exactly, and cut other words instead.
-- 2026-10-16 | all assets | Hand-counted character and word counts come out off by one or more. Recount with a tool, or write "about N". Never state an exact count you did not verify.
-- 2026-10-16 | quiz, checklist | A proposed value (such as the quiz pass mark) is written as fact while 06 and 10 treat it as open. Label it "proposed, to confirm" or add a [NEED PROOF: ...] tag until a source sets it.
+**Availability.** Included in Rewind's Jira Cloud backup plans at a higher plan tier. Plan name and price are not set, so customer copy says "a specific plan tier".
+
+## 4. Who
+- **Primary buyer and user:** the Jira admin. They run the rollback and make the case inside the company. They own uptime, rules and the AI tools wired into Jira, and they are the person everyone looks at when something breaks.
+- **Secondary buyer:** the IT or security leader. They approve the plan and any AI rollout. They want a recovery plan and a record to attach to the approval. They get the message through the admin, with no separate campaign.
+- **Best-fit accounts to reach first:** existing Rewind Jira Cloud customers, sites with heavy automation, teams rolling out AI agents, and regulated industries.
+- **Out of scope:** Confluence-only admins, teams without Rewind backup on Jira Cloud, buyers who want ROI proof, and very large sites or unusual data types until we have answers.
+
+## 5. How we win
+**Positioning.** The real competitor is the choice between restoring everything and fixing it by hand. Atlassian's own restore is built for full-site recovery. Agent Rollback is for the bad Tuesday, when one rule or agent went wrong and the rest of the site is fine. We do not claim Atlassian lacks anything, and we do not name other tools.
+
+**Core message.** When a rule, an integration or an AI agent changes issues it should not have, undo just what it changed, see the effect first, and leave people's work alone.
+
+**Three pillars**
+1. **Undo the one change, not the whole site.** Pick what went wrong and a time window. People's later edits stay in place.
+2. **See it before it changes.** Preview what will change back and what will stay before you commit.
+3. **A record you can hand to security.** Every rollback is logged, and the log can be exported.
+
+**Proof.**
+- Approved today: Rewind protects 16 cloud applications for more than 25,000 organizations, including financial services, healthcare and manufacturing. This supports the company, not this feature.
+- The product itself: the features above are built and shown in the demo.
+- Not yet available: customer results, quotes and any time-saved figure. We say so in the copy and do not fill the gap.
+
+Detail: [04-positioning.md](04-positioning.md), [05-messaging.md](05-messaging.md).
+
+## 6. Where
+| Phase | When | Channel and tactic |
+|---|---|---|
+| Pre-launch | L-28 to L-18 | Build the copy, visuals, sales kit and checklist |
+| Pre-launch | L-17 to L-14 | Review, with Legal, Support and Brand sign-off |
+| Pre-launch | L-10 to L-5 | Sales kit delivered (L-10), rep session (L-7), readiness quiz (L-5) |
+| Launch | L | Customer email with header image to existing Jira Cloud customers |
+| Launch | L | In-app message and banner for admins inside Rewind |
+| Launch | L | Release note |
+| Launch | L+1 | LinkedIn post and image, to reach admins and IT leaders beyond our customers |
+| Launch | From L | Sales one to one, with admin and approver together |
+| Post-launch | L+14, L+30 | Review questions reps could not answer |
+| Post-launch | L+30 | Adoption check |
+| Post-launch | L+90 | Upgrade and pipeline check, and lessons review |
+
+No paid media, press or analyst push in this tier.
+
+## 7. Enablement
+| Audience | What they get | When |
+|---|---|---|
+| **Sales and Sales Engineering** | One-pager, 30-second talk track, discovery questions, objection handling, FAQ and a competitive take: [09-sales-enablement.md](09-sales-enablement.md) | Delivered L-10 |
+| **Sales and Sales Engineering** | 30-minute live session with role-plays: [09b-enablement-session.md](09b-enablement-session.md) | L-7 |
+| **Sales and Sales Engineering** | Readiness quiz: [09c-readiness-quiz.md](09c-readiness-quiz.md) | Due L-5 |
+| **Sales** | Ongoing answers and call prep from the Sales Enablement Lead | From L |
+| **Customer Success** | Nothing built for CS in this kit. Proposal: share the FAQ and limits in the sales kit, and brief CS on the first-backup and attachment limits. Needs an owner. | Proposed for L-7 |
+| **Partners** | Nothing built for Partners in this kit and no partner plan in the sources. Needs a decision on whether partners are in scope. | To decide |
+
+Rule for everyone: say every limit out loud, before the customer asks.
+
+## 8. Launch team
+Roles only. The handoff names no people. Names to be added by the launch lead.
+
+| Role | Owns in this launch |
+|---|---|
+| **Product Marketing** (launch lead) | This plan, positioning, messaging, copy, what claims are allowed |
+| **Product Manager, Jira** | Scope, GA date, success metrics, which data types can be rolled back. Runs the go/no-go |
+| **Engineering lead** | How the activity view tells a person from a rule, integration or AI agent; the same-field case; large sites |
+| **Pricing and packaging** | Plan name and price |
+| **Sales and Sales Engineering** | Using the kit; sourcing any claim about Atlassian or other tools |
+| **Sales Enablement Lead** | Sales kit, rep session, quiz, feedback from reps |
+| **Customer Success** | Who can run a rollback; customer agreement to use beta results |
+| **Support lead** | Plain wording for the attachment limit |
+| **Marketing (lifecycle and social)** | Email, in-app, release note, LinkedIn |
+| **Legal** | Review of "exportable for auditors" and any Confluence mention |
+| **Brand team** | Sign-off on colours and typeface |
+| **Revenue Operations** | CRM field for "AI governance cited as a buying reason" |
+| **Partners** | To be named, if in scope |
+
+**Who decides.** The Product Manager for Jira makes the go/no-go call at L-3. Product Marketing recommends. Legal and the Brand team can each block their own items.
+
+## 9. Key dates and the go/no-go
+| When | Milestone |
+|---|---|
+| L-28 | Build starts. GA date confirmed |
+| L-17 to L-14 | Final review and one revision pass |
+| L-15 | Owners answer open questions: pricing, attachment wording, Legal, brand, data types |
+| L-10 | Sales kit delivered |
+| L-7 | Rep session |
+| L-5 | Quiz due. Baselines and targets set |
+| L-3 | Go/no-go |
+| L | Email, in-app message and release note go live |
+| L+1 | LinkedIn post and image |
+| L+30 | Adoption check |
+| L+90 | Upgrade and pipeline check |
+
+**Go/no-go: all six must be met at L-3, or the date moves.**
+1. GA date confirmed.
+2. Plan wording settled: either the real plan name and price, or "a specific plan tier".
+3. Legal has cleared "exportable for auditors" and any Confluence line, or both are cut.
+4. Support, Product and Engineering have agreed the attachment wording.
+5. Brand team has confirmed colours (yellow #FFC72C, navy #16225C) and typeface.
+6. Product analytics can count how many customers open the activity view.
+
+Approval to use beta results is not a gate, because the kit does not use them.
+
+## 10. Risks and open decisions
+**Decisions needed now**
+
+| Decision | Owner | Needed by |
+|---|---|---|
+| GA date | Product Manager, Jira | L-28 |
+| Plan names and pricing | Pricing and packaging | L-15 |
+| Brand sign-off on visuals | Brand team | L-15 |
+| Legal review of "exportable for auditors" and the Confluence line | Legal | L-15 |
+| Approval to use closed beta results and quotes in public | Customer Success | Not a gate. Review at L+30 |
+| Partners in scope or not | Launch lead | L-28 |
+
+**Risks**
+
+| Risk | What we do |
+|---|---|
+| No GA date | Every date is counted from L, and the go/no-go moves the launch if needed |
+| Attachment wording conflict between the beta handoff and our existing backup wording | Use the handoff wording only. Never say "under 24 hours" next to Agent Rollback |
+| No source for a claim that Atlassian lacks this | Say Atlassian's restore works at the site level. Make no stronger claim |
+| No customer proof or outcome numbers | Lead with the problem and the two bad options. No speed, time or ROI claims |
+| Limits get lost in short assets | Images carry no limits, so the email, in-app message and release note carry them all |
+| Customers misread the first-backup limit | State it plainly in every written asset and in the sales kit |
+| Open product questions (who can run it, large sites, same-field edits) | Reps have holding lines. We make no claim until answered |
+| CRM cannot record the buying reason | Revenue Operations adds a field before L, or the L+90 pipeline read is reported as not measurable |
+| A larger eligible base could justify a bigger launch | Re-score at the go/no-go if the base is sized |
+
+The full list of open items, by file, is in [11-review.md](11-review.md#full-open-items).
+
+## 11. Launch assets
+Status: all assets passed review. Three sales files needed one wording fix first. Items marked "Waiting" need a decision from section 10 before release.
+
+| Asset | Owner | Status | File |
+|---|---|---|---|
+| Launch brief | Product Marketing | Final | [01-launch-brief.md](01-launch-brief.md) |
+| Product context | Product Marketing | Final | [02-launch-context.md](02-launch-context.md) |
+| Audience | Product Marketing | Final | [03-audience.md](03-audience.md) |
+| Positioning | Product Marketing | Final | [04-positioning.md](04-positioning.md) |
+| Messaging | Product Marketing | Final | [05-messaging.md](05-messaging.md) |
+| Campaign strategy | Product Marketing | Final | [06-campaign-strategy.md](06-campaign-strategy.md) |
+| Customer email, in-app message, release note, LinkedIn post | Marketing (lifecycle, social) | Waiting: GA date, pricing, Legal | [07-channel-copy.md](07-channel-copy.md) |
+| Design briefs | Product Marketing, Brand team | Waiting: brand sign-off | [08-design-briefs.md](08-design-briefs.md) |
+| Email header | Marketing | Waiting: brand sign-off | [email-header.png](visuals/email-header.png) |
+| In-app banner | Marketing | Waiting: brand sign-off | [in-app-banner.png](visuals/in-app-banner.png) |
+| LinkedIn image | Marketing | Waiting: brand sign-off | [linkedin-image.png](visuals/linkedin-image.png) |
+| One-pager layout | Sales Enablement Lead | Waiting: brand sign-off, pricing | [one-pager-layout.png](visuals/one-pager-layout.png) |
+| Sales kit | Sales Enablement Lead | Waiting: attachment wording, Legal | [09-sales-enablement.md](09-sales-enablement.md) |
+| Rep session plan | Sales Enablement Lead | Ready | [09b-enablement-session.md](09b-enablement-session.md) |
+| Readiness quiz | Sales Enablement Lead | Waiting: pass mark | [09c-readiness-quiz.md](09c-readiness-quiz.md) |
+| Launch checklist | Product Marketing | Ready | [10-launch-checklist.md](10-launch-checklist.md), [10-launch-checklist.csv](10-launch-checklist.csv) |
+| Review results and open items | Reviewer | Final | [11-review.md](11-review.md) |
+
+## 12. Results vs goals
+To be filled in at L+30, L+60 and L+90.
+
+| KPI | Target | L+30 | L+60 | L+90 |
+|---|---|---|---|---|
+| Share of active Jira customers opening the activity view | To set | | | |
+| Upgrades to the plan that includes Agent Rollback | To set | | | |
+| New opportunities citing AI governance | To set | | | |
+| Reps passing the readiness quiz | To set | | | |
+| What we learned | | | | |
+
+<sub>Drafted by Launch CoPilot: 11 agents, reviewed before release.</sub>

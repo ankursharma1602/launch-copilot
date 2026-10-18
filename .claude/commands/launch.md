@@ -51,35 +51,61 @@ If any asset fails:
 Ask `reviewer-agent` to add any issue likely to repeat to `learnings/lessons.md`, in the format that file specifies. No more than three new lessons per run.
 
 ## Step 11: Run report
-Write `outputs/<slug>/00-run-report.md`:
+Write `outputs/<slug>/00-run-report.md` as a Launch Plan of Record: the single GTM doc a PMM shares with Product, Sales, CS, Partners and leadership. It is not developer documentation.
+
+Rules:
+- Plain PMM language. No em dashes. No jargon such as "actor" or "blast radius" (use the customer words from `05-messaging.md`).
+- No tier scores with decimals, no word or character counts, no file numbers in brackets, no `[NEED PROOF]` tags, no reviewer advisories in the main body.
+- Move the full open-items list (every `[NEED PROOF: ...]`, unknowns, reviewer advisories, anything that failed review twice) into a "Full open items" section at the end of `11-review.md`, and link to it from section 10 with `11-review.md#full-open-items`.
+- Every file name is a clickable relative link that works on GitHub, for example `[07-channel-copy.md](07-channel-copy.md)` and `[email-header.png](visuals/email-header.png)`.
+- Brand colours are Rewind yellow `#FFC72C` and navy `#16225C` (see `context/brand.md`).
+- Use roles, never invented names. If the sources have nothing for Customer Success or Partners, say so and mark it "needs an owner" or "to decide". Do not invent enablement.
+- Dates are L-offsets from `06-campaign-strategy.md` unless a real date exists.
+
+Use this structure, in this order:
 
 ```
-# Launch CoPilot run report: <release name>
+# <release name>: Launch Plan of Record
 
-**Tier:** <tier> (weighted score <x.xx>) <override, if any>
-**Run time:** <minutes>
-**Assets produced:** <count> | **Passed review first time:** <count> | **Revised:** <count> | **Needs a human:** <count>
+Tier <n> launch | Status: <draft | ready | blocked> | Owner: Product Marketing | Updated: <date>
 
-## The launch in three lines
-<what it is, who it's for, why now>
+## 1. Executive summary
+5 to 6 lines: what, for whom, why now, tier, target date, goal, decisions needed
 
-## Decisions the system made
-- <tier and why>
-- <assets deliberately not produced for this tier>
-- <the market category chosen in 04-positioning.md and why>
-- <any positioning or messaging choice worth a human's eye>
+## 2. Why
+Customer problem, evidence (beta evidence labelled internal), launch goals and KPIs (table, with when each is read)
 
-## Needs a human
-- <every [NEED PROOF: ...] across all assets, deduplicated, with the file it's in>
-- <open questions from 01 and 02 that nobody has answered>
-- <field-feedback entries the Sales Enablement Lead could not support>
-- <anything that failed review twice>
+## 3. What
+Product in plain words, what it does, what it does not do, availability
 
-## Files
-<list every file in the folder, including visuals/, with one line on what it is>
+## 4. Who
+Primary buyer, user, secondary buyer, best-fit accounts, out of scope
 
-## Lessons added this run
-<the lines added to learnings/lessons.md, or "None">
+## 5. How we win
+Positioning (alternatives and the frame), core message, three pillars, proof (approved vs not yet available)
+
+## 6. Where
+Table by phase (pre-launch, launch, post-launch) with timing, channel and tactic. State what is not in this tier.
+
+## 7. Enablement
+Table for Sales, CS and Partners: what each gets and when
+
+## 8. Launch team
+Roles and what each owns (PMM, PM, Sales, CS, Partners, Marketing, plus Legal, Brand and others from 01). Who decides.
+
+## 9. Key dates and the go/no-go
+Milestone table and the numbered go/no-go gates from 06
+
+## 10. Risks and open decisions
+Decisions table (decision, owner, needed by), risks table (risk, what we do), link to 11-review.md#full-open-items
+
+## 11. Launch assets
+Table: Asset, Owner, Status, File (relative link). Include upstream files and visuals/.
+
+## 12. Results vs goals
+Empty table (KPI, target, L+30, L+60, L+90), filled after launch
+
+<sub>Drafted by Launch CoPilot: 11 agents, reviewed before release.</sub>
 ```
 
 Finish by printing the run report to the screen.

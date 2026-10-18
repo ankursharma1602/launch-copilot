@@ -28,7 +28,7 @@ Reviewed: 01 to 10 and the four SVG and PNG pairs in `visuals/`. Every PNG was o
 - 06 math: (3 x 0.25) + (4 x 0.25) + (5 x 0.20) + (3 x 0.15) + (5 x 0.15) = 0.75 + 1.00 + 1.00 + 0.45 + 0.75 = 3.95. Correct. The tier is exactly one band, Tier 2. The sensitivity figures check out (reach 4 gives 4.20, story 4 gives 3.80, story 3 gives 3.65). Weights sum to 100%.
 - CSV: 7 columns on all 41 data rows. Every field is quoted, and embedded quotes use single quotes. Every "Depends On" entry matches a Task name exactly (checked rows 19, 31 and 37 in full).
 - Visuals, checked in the SVG source and the PNGs:
-  - Hex codes used are only #F5F8FD, #16225C, #0E102B and #FFFFFF, plus Blue Zodiac opacity tints. No yellow.
+  - Hex codes used are only #F5F8FD, #16225C, #0E102B and #FFFFFF, plus Blue Zodiac opacity tints. No yellow. (First-pass note on the old palette. Superseded: the visuals were re-rendered in Rewind yellow #FFC72C and navy #16225C, see the visuals revision review below.)
   - The "Rewind" wordmark is a live `<text>` element in Cabin 700. There is no logo file, no `<image>` and no Boomerang.
   - PNG glyphs are Cabin. The distinctive single-storey "a" and the "g" are visible in all four.
   - Wordmark sizes are 44, 40, 44 and 84 px, all at or above the 32 px floor.
@@ -261,3 +261,34 @@ Scope: 07-channel-copy.md after the copywriter applied fixes 1 to 3 above. Check
 - The pass-one count notes for 07 (items 1 and 2 in the second-pass advisory list) are now closed. The 08 one-pager count (28, not about 29) and the in-app short-form attachment wording remain open.
 
 07-channel-copy.md: **Pass.** It needs no human beyond the open [NEED PROOF] items already collected.
+
+## Full open items
+Moved here from the run report. The run report lists only the five decisions that block launch.
+
+Blockers for the go/no-go at L-3 (see 06 and 10):
+- GA date: `[NEED PROOF: GA date]` (01, 02, 06, 07, 10)
+- Plan names and pricing: `[NEED PROOF: plan names and pricing]` (all customer-facing assets, which say "a specific plan tier")
+- Brand sign-off: Rewind yellow `#FFC72C` and navy `#16225C`, plus the light neutral `#F5F8FD`, dark neutral `#0E102B` and Cabin, are unconfirmed. `[NEED PROOF: confirm brand palette and typeface with Rewind's brand team]` (context/brand.md, 08, visuals/)
+- Attachment wording: handoff "up to 24 hours old" versus `context/` "under 24 hours" (01, 02, 05, 07, 09)
+- Source or approval for "Atlassian native has no actor-based rollback" (01, 02, 04)
+- Legal review of "exportable for auditors", and sign-off to mention the Confluence roadmap (05, 07, 09)
+- Competitor check on other third-party tools (01, 04, 09)
+- Revenue operations: capture "AI governance cited as a buying reason" in the CRM; product analytics counting Actor view opens (06, 10)
+
+Engineering and product unknowns (reps have holding lines in 09):
+- How Actor view tells a person, rule, integration and AI agent apart
+- What happens when a person edited the same field after the agent
+- Which Jira data types beyond issues and fields can be rolled back
+- Who can run a rollback; large-site behavior; audit log contents and export format
+- How a customer turns the feature on (blocks the email CTA and the release note's first step)
+
+Evidence and measurement:
+- Approval to use any closed beta number or quote outside the team: `[NEED PROOF: approval to use closed beta results or quotes]`
+- Baselines, targets and the definition of "active Jira customers" for the three proposed metrics
+- Size of the eligible customer base; quiz pass mark (7 of 8 is proposed only)
+- Brand team confirmation of the Boomerang yellow hex
+
+Other notes:
+- The SVGs load Cabin from Google Fonts, so they need internet to show Cabin when opened elsewhere. The PNGs are fixed.
+- `learnings/field-feedback.md` has no entries, so the Sales Enablement Lead had nothing to support or flag.
+- Input is a hypothetical closed beta handoff. The beta stats and customer feedback are mock.
