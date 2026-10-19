@@ -2,7 +2,7 @@
 
 A GTM launch team in a repo. Eleven agents take a closed beta handoff to a full, reviewed launch: brief, audience, positioning, messaging, a tiered campaign plan, copy, visuals, sales enablement and a launch checklist.
 
-**Demo:** a full launch for a mock Rewind release, Agent Rollback for Jira. Start with `outputs/agent-rollback-jira/00-run-report.md`.
+**Demo:** **a full launch for a mock Rewind release, Agent Rollback for Jira. Start with `outputs/agent-rollback-jira/00-run-report.md`.**
 
 ---
 
