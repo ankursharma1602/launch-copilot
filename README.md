@@ -1,4 +1,4 @@
-# Product Launch CoPilot for Rewind's Agent Rollback for Jira
+# Product Launch CoPilot for Rewind
 
 A GTM launch team in a repo. Eleven agents take a closed beta handoff to a full, reviewed launch: brief, audience, positioning, messaging, a tiered campaign plan, copy, visuals, sales enablement and a launch checklist.
 
