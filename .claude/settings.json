@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Write(outputs/**)",
+      "Edit(outputs/**)",
+      "Edit(learnings/lessons.md)"
+    ]
+  }
+}
